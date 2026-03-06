@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./root.css">
+</head>
+<body>
+
+
+    <style>
+        .error-page {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-main); /* #EBEBEB */
+    text-align: center;
+    overflow: hidden;
+}
+
+.error-visual {
+    position: relative;
+    margin-bottom: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* --- Radar Animation --- */
+.radar {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    background: var(--bg-subtle);
+    border-radius: 50%;
+    border: 2px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-md);
+}
+
+.radar-circle {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 1px solid var(--primary-orange);
+    opacity: 0.2;
+    animation: pulse-ring 2s infinite ease-out;
+}
+
+.radar-beam {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    top: 0;
+    left: 50%;
+    background: linear-gradient(45deg, var(--primary-orange), transparent);
+    transform-origin: bottom left;
+    border-radius: 100% 0 0 0;
+    animation: rotate-beam 4s infinite linear;
+    opacity: 0.4;
+}
+
+.error-code {
+    font-size: 5rem;
+    font-weight: 900;
+    color: var(--text-main);
+    z-index: 5;
+    letter-spacing: -2px;
+}
+
+/* --- Floating Decorative Icons --- */
+.error-icon {
+    position: absolute;
+    font-size: 2.5rem;
+    color: var(--primary-orange);
+    opacity: 0.4;
+}
+
+.icon-top {
+    top: -20px;
+    right: -30px;
+    animation: float-slow 5s infinite ease-in-out;
+}
+
+.icon-bottom {
+    bottom: -10px;
+    left: -30px;
+    animation: float-slow 7s infinite ease-in-out;
+}
+
+/* --- Keyframes --- */
+@keyframes rotate-beam {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes pulse-ring {
+    0% { transform: scale(0.8); opacity: 0.5; }
+    100% { transform: scale(1.5); opacity: 0; }
+}
+
+@keyframes float-slow {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(10deg); }
+}
+
+/* --- Content Styling --- */
+.error-content h1 {
+    font-size: 3rem;
+    margin: 1rem 0;
+}
+
+.error-content p {
+    max-width: 500px;
+    margin: 0 auto 2.5rem;
+}
+
+.error-btns {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.btn-outline {
+    padding: 12px 25px;
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius);
+    text-decoration: none;
+    color: var(--text-main);
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.btn-outline:hover {
+    border-color: var(--primary-orange);
+    color: var(--primary-orange);
+}
+
+@media (max-width: 768px) {
+    .error-code { font-size: 3.5rem; }
+    .radar { width: 180px; height: 180px; }
+    .error-btns { flex-direction: column; align-items: center; }
+}
+    </style>
+
+
+
+    <section class="error-page">
+    <div class="container">
+        <div class="error-visual">
+            <div class="radar">
+                <div class="radar-beam"></div>
+                <div class="radar-circle"></div>
+                <div class="error-code">404</div>
+            </div>
+            
+            <i class="fa-solid fa-wifi error-icon icon-top"></i>
+            <i class="fa-solid fa-plug-circle-xmark error-icon icon-bottom"></i>
+        </div>
+
+        <div class="error-content">
+            <span class="badge-tag"><i class="fa-solid fa-triangle-exclamation"></i> Connection Lost</span>
+            <h1>Packet <span class="accent">Not Found</span></h1>
+            <p>The node you are looking for has been decommissioned or moved to a different coordinate. Let's get you back on the main grid.</p>
+            
+            <div class="error-btns">
+                <a href="index.html" class="btn-primary"><i class="fa-solid fa-house"></i> Return Home</a>
+                <a href="#" class="btn-outline">System Status</a>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>

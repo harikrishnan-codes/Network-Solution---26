@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot Password - NetSolve</title>
+    <link rel="icon" href="./assets/bg remove.webp">
+    <link rel="stylesheet" href="./sign.css">
+    <link rel="stylesheet" href="./root.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="auth-container">
+        <!-- Background Effects -->
+        <div class="bg-effects">
+            <div class="effect-orb orb-1"></div>
+            <div class="effect-orb orb-2"></div>
+        </div>
+
+        <!-- Auth Card -->
+        <div class="auth-card">
+            <!-- Forgot Password Form -->
+            <form class="auth-form active" id="forgotForm">
+                <div class="form-header">
+                    <div class="forgot-icon">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <h2>Reset Password</h2>
+                    <p>Enter your email to receive reset instructions</p>
+                </div>
+
+                <div class="input-group">
+                    <label for="forgotEmail">Email Address</label>
+                    <div class="input-wrapper">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="forgotEmail" placeholder="Enter your registered email" required>
+                    </div>
+                    <span class="error-message" id="forgotEmailError"></span>
+                </div>
+
+                <button type="submit" class="btn-submit">Send Reset Link</button>
+
+                <div class="form-footer">
+                    <p><a href="sign.html" class="link-btn"><i class="fas fa-arrow-left"></i> Back to Login</a></p>
+                </div>
+            </form>
+        </div>
+
+        <!-- Back to Home -->
+        <a href="index.html" class="back-home">
+            <i class="fas fa-home"></i> Back to Home
+        </a>
+    </div>
+
+    <script src="./script.js"></script>
+    <script>
+        // Validation Functions
+        function validateEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(email);
+        }
+
+        function showError(inputId, message) {
+            const inputGroup = document.getElementById(inputId).closest('.input-group');
+            const errorSpan = document.getElementById(inputId + 'Error');
+            inputGroup.classList.add('error');
+            errorSpan.textContent = message;
+        }
+
+        function clearError(inputId) {
+            const inputGroup = document.getElementById(inputId).closest('.input-group');
+            const errorSpan = document.getElementById(inputId + 'Error');
+            inputGroup.classList.remove('error');
+            errorSpan.textContent = '';
+        }
+
+        // Forgot Password Form
+        document.getElementById('forgotForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            let isValid = true;
+
+            const email = document.getElementById('forgotEmail').value;
+
+            if (!email) {
+                showError('forgotEmail', 'Email is required');
+                isValid = false;
+            } else if (!validateEmail(email)) {
+                showError('forgotEmail', 'Please enter a valid email');
+                isValid = false;
+            } else {
+                clearError('forgotEmail');
+            }
+
+            if (isValid) {
+                alert('Password reset link has been sent to your email!');
+                window.location.href = 'sign.html';
+            }
+        });
+
+        // Input focus effects
+        document.querySelectorAll('.input-wrapper input').forEach(input => {
+            input.addEventListener('focus', function() {
+                this.closest('.input-wrapper').classList.add('focused');
+            });
+            
+            input.addEventListener('blur', function() {
+                this.closest('.input-wrapper').classList.remove('focused');
+            });
+        });
+    </script>
+</body>
+</html>
