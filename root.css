@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+
+
+:root {
+    /* --- Primary Brand Colors --- */
+
+    --primary-orange: #FF6B00;
+    --primary-hover: #E66000;
+    --primary-light: #FFF7ED;
+    --navy:rgb(4, 4, 44);
+
+    /* --- Neutral Palette (Light Theme) --- */
+    /* --- The New Neutral Balance --- */
+    --bg-main: #EBEBEB;       /* Premium Light Gray */
+    --bg-subtle: #FFFFFF;     /* Pure White for cards to stand out */
+    --border-color: #D1D5DB;   /* Soft gray border */
+    
+    /* --- Typography Adjustment (Darker for Contrast) --- */
+    --text-main: #1F2937;     /* Deep Charcoal for high readability */
+    --text-muted: #4B5563;    /* Medium Gray for descriptions */
+    --text-on-orange: #FFFFFF;
+
+    --success: #10B981;
+    --error: #EF4444;
+    --info: #0EA5E9;
+
+    /* --- Spacing & Shadows --- */
+    --radius: 8px;
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+}
+
+.card {
+    background-color: var(--bg-subtle);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    padding: 20px;
+    box-shadow: var(--shadow-sm);
+}
+
+.btn-primary {
+    background-color: var(--primary-orange);
+    color: var(--text-on-orange);
+    padding: 10px 20px;
+    border-radius: var(--radius);
+    transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+}
+
+
+
+
+
+
+:root {
+    /* --- Font Sizes --- */
+    --fs-h1: 2.5rem;
+    --fs-h2: 2rem;
+    --fs-h3: 1.5rem;
+    --fs-h4: 1.25rem;
+    --fs-h5: 1.125rem;
+    --fs-h6: 1rem;
+
+    --fs-p: 1rem;
+    --fs-p-sm: 0.875rem;
+
+    --lh-heading: 1.2;
+    --lh-body: 1.6;
+}
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--text-main);
+    line-height: var(--lh-heading);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: var(--fs-h1);
+    letter-spacing: -0.02em;
+}
+
+h2 {
+    font-size: var(--fs-h2);
+    border-left: 4px solid var(--primary-orange);
+    padding-left: 15px;
+}
+
+h3 {
+    font-size: var(--fs-h3);
+}
+
+p {
+    font-size: var(--fs-p);
+    line-height: var(--lh-body);
+    color: var(--text-muted);
+    margin-bottom: 1.25rem;
+    max-width: 70ch;
+}
+
+
+
+
+/* header */
+
+.main-header {
+    background-color: var(--bg-main);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 0.75rem 0;
+    box-shadow: var(--shadow-sm);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--text-main);
+    text-decoration: none;
+    letter-spacing: -0.5px;
+}
+
+.logo span {
+    color: var(--primary-orange);
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-main);
+    font-weight: 500;
+    font-size: var(--fs-p);
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--primary-orange);
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+}
+
+.bar {
+    width: 100%;
+    height: 3px;
+    background-color: var(--text-main);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-main);
+        border-top: 1px solid var(--border-color);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-in-out;
+    }
+
+    .nav-menu.active {
+        max-height: 500px;
+        box-shadow: var(--shadow-md);
+    }
+
+    .nav-list {
+        flex-direction: column;
+        padding: 2rem 0;
+        gap: 1.5rem;
+    }
+
+    .btn-primary {
+        width: 80%;
+        text-align: center;
+    }
+}
