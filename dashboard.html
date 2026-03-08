@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiber Dashboard | Network Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* --- Root Variables & Reset --- */
+        :root {
+            --primary-orange: #FF6B00;
+            --primary-hover: #E66000;
+            --primary-light: #FFF7ED;
+            --navy: rgb(4, 4, 44);
+            --bg-main: #EBEBEB;
+            --bg-subtle: #FFFFFF;
+            --text-main: #1F2937;
+            --text-muted: #4B5563;
+            --border-color: #D1D5DB;
+            --radius: 8px;
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg-main); color: var(--text-main); overflow-x: hidden; }
+
+        /* --- Sidebar & Layout --- */
+        .dashboard-container { display: flex; min-height: 100vh; }
+
+        .sidebar {
+            position: fixed;
+            left: -260px; /* Hidden by default on mobile */
+            width: 260px;
+            height: 100vh;
+            background: var(--navy);
+            color: white;
+            transition: 0.3s ease;
+            z-index: 1000;
+            padding: 20px;
+        }
+
+        .sidebar.active { left: 0; }
+
+        .logo { font-size: 1.5rem; font-weight: 700; margin-bottom: 40px; color: white; }
+        .logo span { color: var(--primary-orange); }
+
+        .nav-links { list-style: none; }
+        .nav-item {
+            padding: 15px;
+            margin-bottom: 8px;
+            border-radius: var(--radius);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: 0.3s;
+            color: rgba(255,255,255,0.7);
+        }
+
+        .nav-item i { width: 20px; text-align: center; }
+        .nav-item:hover, .nav-item.active {
+            background: var(--primary-orange);
+            color: white;
+        }
+
+        /* --- Main Content Area --- */
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            transition: 0.3s;
+            width: 100%;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            background: var(--bg-subtle);
+            padding: 15px 20px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .hamburger { font-size: 1.5rem; cursor: pointer; color: var(--navy); }
+
+        /* --- Content Sections --- */
+        .content-section { display: none; animation: fadeIn 0.4s ease; }
+        .content-section.active { display: block; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* --- Dashboard Widgets --- */
+        .stats-grid { display: grid; grid-template-columns: 1fr; gap: 20px; margin-bottom: 30px; }
+        .stat-card {
+            background: var(--bg-subtle);
+            padding: 20px;
+            border-radius: var(--radius);
+            border-left: 4px solid var(--primary-orange);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .stat-card h3 { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 10px; }
+        .stat-card p { font-size: 1.5rem; font-weight: 700; color: var(--navy); }
+
+        .data-usage-bar {
+            height: 10px;
+            background: #e5e7eb;
+            border-radius: 10px;
+            margin-top: 10px;
+            overflow: hidden;
+        }
+        .usage-fill { width: 65%; height: 100%; background: var(--primary-orange); }
+
+        /* --- Responsive 768px Media Query --- */
+        @media (min-width: 768px) {
+            .sidebar { left: 0; } /* Always show sidebar */
+            .main-content { margin-left: 260px; padding: 40px; }
+            .hamburger { display: none; } /* Hide menu button on desktop */
+            .stats-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <aside class="sidebar" id="sidebar">
+            <div class="logo">Net<span>Sol</span> Portal</div>
+            <ul class="nav-links">
+                <li class="nav-item active" onclick="showSection('overview')">
+                    <i class="fa-solid fa-chart-line"></i> Overview
+                </li>
+                <li class="nav-item" onclick="showSection('usage')">
+                    <i class="fa-solid fa-gauge-high"></i> Data Usage
+                </li>
+                <li class="nav-item" onclick="showSection('billing')">
+                    <i class="fa-solid fa-file-invoice-dollar"></i> Billing & Plans
+                </li>
+                <li class="nav-item" onclick="showSection('support')">
+                    <i class="fa-solid fa-headset"></i> Help & Support
+                </li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <header>
+                <div class="hamburger" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></div>
+                <div class="user-profile">
+                    Welcome, <strong>User #4021</strong> <i class="fa-solid fa-circle-user"></i>
+                </div>
+            </header>
+
+            <section id="overview" class="content-section active">
+                <h2>Account Overview</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Current Plan</h3>
+                        <p>300 Mbps Fiber Pro</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Network Status</h3>
+                        <p style="color: var(--success);"><i class="fa-solid fa-circle-check"></i> Online</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Next Bill Date</h3>
+                        <p>March 25, 2026</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="usage" class="content-section">
+                <h2>Monthly Data Usage</h2>
+                <div class="stat-card" style="margin-top:20px;">
+                    <h3>Consumption: 650GB / 1000GB</h3>
+                    <div class="data-usage-bar"><div class="usage-fill"></div></div>
+                    <p style="font-size: 0.9rem; margin-top: 10px;">You have used 65% of your high-speed quota.</p>
+                </div>
+            </section>
+
+            <section id="billing" class="content-section">
+                <h2>Billing History</h2>
+                <div class="stat-card" style="margin-top:20px;">
+                    <p>Last Invoice: $79.00 (Paid)</p>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">Invoice ID: #NS-99821</p>
+                </div>
+            </section>
+
+            <section id="support" class="content-section">
+                <h2>Support Tickets</h2>
+                <div class="stat-card" style="margin-top:20px;">
+                    <p>No active tickets found.</p>
+                    <button class="nav-item" style="background: var(--navy); border:none; margin-top:15px; padding:10px 20px;">
+                        Raise New Ticket
+                    </button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        // Toggle Hamburger Menu (Mobile)
+        function toggleMenu() {
+            document.getElementById('sidebar').classList.toggle('active');
+        }
+
+        // Single Page Navigation Function
+        function showSection(sectionId) {
+            // Remove active class from all sections
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(sec => sec.classList.remove('active'));
+
+            // Remove active class from all nav items
+            const navItems = document.querySelectorAll('.nav-item');
+            navItems.forEach(item => item.classList.remove('active'));
+
+            // Show target section
+            document.getElementById(sectionId).classList.add('active');
+
+            // Find clicked item and make it active (using event target)
+            const activeItem = Array.from(navItems).find(item => 
+                item.innerText.toLowerCase().includes(sectionId)
+            );
+            if(activeItem) activeItem.classList.add('active');
+
+            // Close sidebar on mobile after clicking
+            if (window.innerWidth < 768) {
+                toggleMenu();
+            }
+        }
+    </script>
+</body>
+</html>

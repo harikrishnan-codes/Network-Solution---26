@@ -4,18 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NetSolve - Next Generation Fiber Internet</title>
+    <title>Network Solution</title>
 
     <link rel="icon" href="./assets/bg remove.webp">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./root.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
 
-     <div class="bg-orbs">
+    <div class="bg-orbs">
         <div class="orb orb-1"></div>
         <div class="orb orb-2"></div>
         <div class="orb orb-3"></div>
@@ -24,7 +26,7 @@
     <header class="main-header">
         <div class="nav-container">
             <div class="logo">
-                <a href="#"><img src="./assets/orange.webp" alt="" width="150px"></a>
+                <a href="index.html"><img src="./assets/orange.webp" alt="" width="150px"></a>
             </div>
 
             <button class="menu-toggle" id="mobile-menu-btn" aria-label="Toggle Menu">
@@ -35,160 +37,67 @@
 
             <nav class="nav-menu" id="nav-menu">
                 <ul class="nav-list">
-                    <li><a href="#services" class="nav-link">Services</a></li>
-                    <li><a href="#solutions" class="nav-link">Solutions</a></li>
-                    <li><a href="#coverage" class="nav-link">Coverage</a></li>
-                    <li><a href="#pricing" class="nav-link">Pricing</a></li>
-                    <li><a href="#contact" class="btn-primary">Get Started</a></li>
+                    <li><a href="./index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="service.html" class="nav-link">Service</a></li>
+                    <li><a href="service.html" class="nav-link">Contact</a></li>
+                    <li><a href="service.html" class="nav-link">Dashboard</a></li>
+                    <li><a href="sign.html" class="btn-primary">SignUp</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
-        <!-- Hero Section -->
-        <section class="hero" id="hero">
-            <div class="hero-slider">
-                <div class="hero-slide active">
-                    <div class="hero-bg" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);"></div>
-                    <div class="hero-particles">
-                        <span></span><span></span><span></span><span></span><span></span>
-                    </div>
-                    <div class="hero-content">
-                        <div class="hero-badge">
-                            <span class="pulse-dot"></span>
-                            Now Serving 50+ Cities
-                        </div>
-                        <h1>Experience <span class="highlight">Gigabit</span> Speed Like Never Before</h1>
-                        <p>Lightning-fast fiber broadband with 99.99% uptime. Stream 8K, game at pro-level, and work seamlessly from home without a single buffer.</p>
-                        <div class="hero-stats">
-                            <div class="stat">
-                                <span class="stat-number">1</span>
-                                <span class="stat-label">Gbps Download</span>
-                            </div>
-                            <div class="stat">
-                                <span class="stat-number">1</span>
-                                <span class="stat-label">Gbps Upload</span>
-                            </div>
-                            <div class="stat">
-                                <span class="stat-number"><1</span>
-                                <span class="stat-label">ms Latency</span>
-                            </div>
-                        </div>
-                        <div class="hero-buttons">
-                            <a href="#" class="btn-primary">Check Availability <i class="fas fa-arrow-right"></i></a>
-                            <a href="#" class="btn-outline"><i class="fas fa-play"></i> See Plans</a>
-                        </div>
-                    </div>
-                    <div class="hero-visual">
-                        <div class="device-mockup">
-                            <div class="screen">
-                                <div class="loading-bar">
-                                    <div class="progress" style="width: 100%;"></div>
-                                </div>
-                                <div class="speed-display">
-                                    <span class="big-speed">999</span>
-                                    <span class="unit">Mbps</span>
-                                </div>
-                                <div class="connection-icons">
-                                    <i class="fas fa-wifi"></i>
-                                    <i class="fas fa-signal"></i>
-                                    <i class="fas fa-bolt"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <section class="hero">
 
-                <div class="hero-slide">
-                    <div class="hero-bg" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);"></div>
-                    <div class="hero-particles">
-                        <span></span><span></span><span></span><span></span><span></span>
-                    </div>
-                    <div class="hero-content">
-                        <div class="hero-badge enterprise">
-                            <i class="fas fa-building"></i>
-                            Enterprise Grade Solutions
-                        </div>
-                        <h1>Power Your Business with <span class="highlight">Dedicated</span> Fiber</h1>
-                        <p>Symmetric gigabit speeds, static IPs, and 24/7 priority support. Scale your operations with infrastructure that never lets you down.</p>
-                        <div class="hero-features">
-                            <div class="feature-item"><i class="fas fa-check-circle"></i> 99.99% SLA Guarantee</div>
-                            <div class="feature-item"><i class="fas fa-check-circle"></i> 24/7 Priority Support</div>
-                            <div class="feature-item"><i class="fas fa-check-circle"></i> Free Hardware</div>
-                        </div>
-                        <div class="hero-buttons">
-                            <a href="#" class="btn-primary">Business Solutions <i class="fas fa-arrow-right"></i></a>
-                            <a href="#" class="btn-outline"><i class="fas fa-headset"></i> Talk to Sales</a>
-                        </div>
-                    </div>
-                    <div class="hero-visual business-visual">
-                        <div class="stats-grid">
-                            <div class="mini-stat">
-                                <i class="fas fa-server"></i>
-                                <span>99.99%</span>
-                                <p>Uptime</p>
-                            </div>
-                            <div class="mini-stat">
-                                <i class="fas fa-shield-alt"></i>
-                                <span>24/7</span>
-                                <p>Monitoring</p>
-                            </div>
-                            <div class="mini-stat">
-                                <i class="fas fa-globe"></i>
-                                <span>50+</span>
-                                <p>Cities</p>
-                            </div>
-                            <div class="mini-stat">
-                                <i class="fas fa-users"></i>
-                                <span>2.5M</span>
-                                <p>Users</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="hero-slide">
-                    <div class="hero-bg" style="background: linear-gradient(135deg, #0c0c0c 0%, #1a1a1a 50%, #0a0a0a 100%);"></div>
-                    <div class="hero-particles">
-                        <span></span><span></span><span></span><span></span><span></span>
-                    </div>
-                    <div class="hero-content">
-                        <div class="hero-badge smart">
-                            <i class="fas fa-microchip"></i>
-                            WiFi 6E Powered
-                        </div>
-                        <h1>Smart Home <span class="highlight">Revolution</span> Starts Here</h1>
-                        <p>Connect 100+ devices simultaneously with enterprise-grade mesh WiFi. Every corner of your home gets blazing fast speeds.</p>
-                        <div class="hero-visual-smart">
-                            <div class="device-ring">
-                                <div class="device hub"><i class="fas fa-wifi"></i></div>
-                                <div class="device device-1"><i class="fas fa-laptop"></i></div>
-                                <div class="device device-2"><i class="fas fa-mobile-alt"></i></div>
-                                <div class="device device-3"><i class="fas fa-tv"></i></div>
-                                <div class="device device-4"><i class="fas fa-gamepad"></i></div>
-                            </div>
-                        </div>
-                        <div class="hero-buttons">
-                            <a href="#" class="btn-primary">View Smart Plans <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
+            <div class="hero-slide active">
+                <div class="hero-content">
+                    <span class="hero-tag">NETWORK SOLUTIONS</span>
+                    <h1>High Speed <br> Fiber Internet <br> For Your Home</h1>
+                    <p>Experience lightning fast fiber broadband with stable connectivity for streaming, gaming and
+                        work.</p>
+                    <a href="./404.html" class="btn-primary">Get Fiber Now</a>
                 </div>
             </div>
 
-            <div class="slider-controls">
-                <button class="slide-btn active" data-slide="0"><span></span></button>
-                <button class="slide-btn" data-slide="1"><span></span></button>
-                <button class="slide-btn" data-slide="2"><span></span></button>
-            </div>
-            
-            <div class="scroll-hint">
-                <span>Scroll to Explore</span>
-                <div class="mouse">
-                    <div class="wheel"></div>
+            <div class="hero-slide">
+                <div class="hero-content">
+                    <span class="hero-tag">SMART WIFI</span>
+                    <h1>Reliable WiFi <br> Coverage For <br> Every Corner</h1>
+                    <p>Smart WiFi routers with strong signal coverage designed for modern homes and offices.</p>
+                    <a href="#" class="btn-primary">Explore Plans</a>
                 </div>
             </div>
+
+            <div class="hero-slide">
+                <div class="hero-content">
+                    <span class="hero-tag">BUSINESS NETWORK</span>
+                    <h1>Secure Internet <br> Solutions For <br> Your Business</h1>
+                    <p>Enterprise grade connectivity with advanced security and dedicated bandwidth.</p>
+                    <a href="#" class="btn-primary">Business Plans</a>
+                </div>
+            </div>
+
+            <div class="hero-slide">
+                <div class="hero-content">
+                    <span class="hero-tag">ULTRA FAST BROADBAND</span>
+                    <h1>Stream, Work <br> And Game <br> Without Limits</h1>
+                    <p>Unlimited fiber broadband designed for heavy internet users and smart homes.</p>
+                    <a href="#" class="btn-primary">Check Availability</a>
+                </div>
+            </div>
+
         </section>
+
+
+
+
+
+
+
+
+
 
         <!-- Services Section -->
         <section class="services-section" id="services">
@@ -196,7 +105,8 @@
                 <div class="section-header">
                     <span class="section-tag"><i class="fas fa-bolt"></i> Why Choose Us</span>
                     <h2>Fiber Internet <span class="accent">Engineered</span> for Excellence</h2>
-                    <p>We're not just another ISP. Our proprietary fiber network delivers speeds and reliability that competitors simply can't match.</p>
+                    <p>We're not just another ISP. Our proprietary fiber network delivers speeds and reliability that
+                        competitors simply can't match.</p>
                 </div>
 
                 <div class="services-grid">
@@ -205,7 +115,8 @@
                             <i class="fas fa-bolt"></i>
                         </div>
                         <h3>Symmetric Speeds</h3>
-                        <p>Equal upload and download speeds up to 1Gbps. Perfect for video calls, cloud storage, and live streaming without any bottlenecks.</p>
+                        <p>Equal upload and download speeds up to 1Gbps. Perfect for video calls, cloud storage, and
+                            live streaming without any bottlenecks.</p>
                         <div class="service-stats">
                             <span class="service-stat">1 Gbps</span>
                             <span class="service-label">Upload/Download</span>
@@ -217,7 +128,8 @@
                             <i class="fas fa-shield-alt"></i>
                         </div>
                         <h3>Bank-Level Security</h3>
-                        <p>Enterprise-grade firewall and encryption included free. Your data stays protected with automatic threat detection and 24/7 monitoring.</p>
+                        <p>Enterprise-grade firewall and encryption included free. Your data stays protected with
+                            automatic threat detection and 24/7 monitoring.</p>
                         <div class="service-stats">
                             <span class="service-stat">256-bit</span>
                             <span class="service-label">Encryption</span>
@@ -229,7 +141,8 @@
                             <i class="fas fa-infinity"></i>
                         </div>
                         <h3>Unlimited Data</h3>
-                        <p>No data caps, no throttling, no hidden limits. Stream, game, and download as much as you want, whenever you want.</p>
+                        <p>No data caps, no throttling, no hidden limits. Stream, game, and download as much as you
+                            want, whenever you want.</p>
                         <div class="service-stats">
                             <span class="service-stat">∞</span>
                             <span class="service-label">Monthly Data</span>
@@ -241,10 +154,12 @@
                             <i class="fas fa-headset"></i>
                         </div>
                         <h3>24/7 Expert Support</h3>
-                        <p>Real humans, not bots. Our network engineers are available around the clock to help with any issue, big or small.</p>
+                        <p>Real humans, not bots. Our network engineers are available around the clock to help with any
+                            issue, big or small.</p>
                         <div class="service-stats">
-                            <span class="service-stat"><2 min</span>
-                            <span class="service-label">Avg Wait Time</span>
+                            <span class="service-stat">
+                                <2 min</span>
+                                    <span class="service-label">Avg Wait Time</span>
                         </div>
                     </div>
                 </div>
@@ -258,7 +173,8 @@
                     <div class="speed-text">
                         <span class="section-tag"><i class="fas fa-tachometer-alt"></i> Performance</span>
                         <h2>Blazing Fast <span class="accent">Speeds</span> for Every Need</h2>
-                        <p>Whether you're a casual browser or a power user, we have a plan that fits. All plans include symmetric speeds and no data caps.</p>
+                        <p>Whether you're a casual browser or a power user, we have a plan that fits. All plans include
+                            symmetric speeds and no data caps.</p>
 
                         <div class="speed-features">
                             <div class="s-feature">
@@ -291,13 +207,16 @@
                                 <svg class="gauge-svg" viewBox="0 0 200 100">
                                     <defs>
                                         <linearGradient id="gaugeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                                            <stop offset="0%" style="stop-color:#FF6B00"/>
-                                            <stop offset="50%" style="stop-color:#FF8C00"/>
-                                            <stop offset="100%" style="stop-color:#FFB700"/>
+                                            <stop offset="0%" style="stop-color:#FF6B00" />
+                                            <stop offset="50%" style="stop-color:#FF8C00" />
+                                            <stop offset="100%" style="stop-color:#FFB700" />
                                         </linearGradient>
                                     </defs>
-                                    <path class="gauge-bg" d="M20,90 A80,80 0 0,1 180,90" fill="none" stroke="#e2e8f0" stroke-width="12" stroke-linecap="round"/>
-                                    <path class="gauge-fill" id="speed-path" d="M20,90 A80,80 0 0,1 180,90" fill="none" stroke="url(#gaugeGradient)" stroke-width="12" stroke-linecap="round" stroke-dasharray="251" stroke-dashoffset="251"/>
+                                    <path class="gauge-bg" d="M20,90 A80,80 0 0,1 180,90" fill="none" stroke="#e2e8f0"
+                                        stroke-width="12" stroke-linecap="round" />
+                                    <path class="gauge-fill" id="speed-path" d="M20,90 A80,80 0 0,1 180,90" fill="none"
+                                        stroke="url(#gaugeGradient)" stroke-width="12" stroke-linecap="round"
+                                        stroke-dasharray="251" stroke-dashoffset="251" />
                                 </svg>
                                 <div class="gauge-center">
                                     <span class="speed-value" id="speed-number">0</span>
@@ -318,13 +237,14 @@
             </div>
         </section>
 
-        <!-- Coverage Map Section --> 
+        <!-- Coverage Map Section -->
         <section class="coverage-section" id="coverage">
             <div class="container">
                 <div class="section-header dark">
                     <span class="section-tag"><i class="fas fa-globe-americas"></i> Network Coverage</span>
                     <h2>Expanding <span class="accent">Everywhere</span></h2>
-                    <p>Our fiber network is rapidly expanding across the nation. Check if we service your area today.</p>
+                    <p>Our fiber network is rapidly expanding across the nation. Check if we service your area today.
+                    </p>
                 </div>
 
                 <div class="coverage-wrapper">
@@ -465,7 +385,8 @@
                             </div>
                             <div class="stars">★★★★★</div>
                         </div>
-                        <p>"Switched from a major cable provider and haven't looked back. The symmetric speeds are game-changing for my remote work. Upload large code repos in seconds!"</p>
+                        <p>"Switched from a major cable provider and haven't looked back. The symmetric speeds are
+                            game-changing for my remote work. Upload large code repos in seconds!"</p>
                         <div class="testimonial-speed">
                             <i class="fas fa-bolt"></i> 999 Mbps / 999 Mbps
                         </div>
@@ -481,7 +402,8 @@
                             </div>
                             <div class="stars">★★★★★</div>
                         </div>
-                        <p>"As a YouTuber uploading 4K videos daily, this is a lifesaver. What used to take hours now takes minutes. Worth every penny!"</p>
+                        <p>"As a YouTuber uploading 4K videos daily, this is a lifesaver. What used to take hours now
+                            takes minutes. Worth every penny!"</p>
                         <div class="testimonial-speed">
                             <i class="fas fa-bolt"></i> 1 Gbps / 1 Gbps
                         </div>
@@ -496,13 +418,13 @@
                             </div>
                             <div class="stars">★★★★★</div>
                         </div>
-                        <p>"Finally, fiber that delivers on gaming promises. Sub-1ms latency has improved my ranked play significantly. No more lag spikes!"</p>
+                        <p>"Finally, fiber that delivers on gaming promises. Sub-1ms latency has improved my ranked play
+                            significantly. No more lag spikes!"</p>
                         <div class="testimonial-speed">
-                            <i class="fas fa-bolt"></i> 999 Mbps / <1ms
+                            <i class="fas fa-bolt"></i> 999 Mbps / <1ms </div>
                         </div>
                     </div>
                 </div>
-            </div>
         </section>
 
         <!-- CTA Section -->
@@ -512,7 +434,8 @@
                     <div class="cta-content">
                         <span class="section-tag"><i class="fas fa-rocket"></i> Get Started</span>
                         <h2>Ready for <span class="accent">Gigabit</span> Life?</h2>
-                        <p>Join 2.5 million satisfied customers experiencing the future of internet. Check availability in your area today!</p>
+                        <p>Join 2.5 million satisfied customers experiencing the future of internet. Check availability
+                            in your area today!</p>
                         <div class="cta-features">
                             <div class="cta-feature"><i class="fas fa-check"></i> Free Installation</div>
                             <div class="cta-feature"><i class="fas fa-check"></i> No Contract</div>
@@ -534,49 +457,54 @@
         </section>
     </main>
 
+
+
     <footer class="main-footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
                     <div class="logo">
-                        <a href="#"><img src="./assets/orange.webp" alt="" width="150px"></a>
+                        <a href="./index.html"><img src="./assets/orange.webp" alt="" width="150px"></a>
                     </div>
-                    <p>Pioneering the next generation of sub-millisecond networking and enterprise fiber solutions since 2010.</p>
+                    <p>Pioneering the next generation of sub-millisecond networking and enterprise fiber solutions since
+                        2010.</p>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="./404.html"><i class="fab fa-twitter"></i></a>
+                        <a href="./404.html"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="./404.html"><i class="fab fa-instagram"></i></a>
+                        <a href="./404.html"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
 
                 <div class="footer-links">
-                    <h4>Services</h4>
+                    <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="#">Home Fiber</a></li>
-                        <li><a href="#">Business Pro</a></li>
-                        <li><a href="#">Enterprise Solutions</a></li>
-                        <li><a href="#">Smart WiFi</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="service.html">Service</a></li>
+                        <li><a href="service.html">Contact</a></li>
+                        <li><a href="service.html">Dashboard</a></li>
+                        <li><a href="sign.html">SignUp</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-links">
                     <h4>Company</h4>
                     <ul>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Press</a></li>
-                        <li><a href="#">Blog</a></li>
+                        <li><a href="./404.html">About Us</a></li>
+                        <li><a href="./404.html">Careers</a></li>
+                        <li><a href="./404.html">Press</a></li>
+                        <li><a href="./404.html">Blog</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-links">
                     <h4>Support</h4>
                     <ul>
-                        <li><a href="#">Help Center</a></li>
-                        <li><a href="#">Service Status</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="./404.html">Help Center</a></li>
+                        <li><a href="./404.html">Service Status</a></li>
+                        <li><a href="./404.html">Contact Us</a></li>
+                        <li><a href="./404.html">Privacy Policy</a></li>
                     </ul>
                 </div>
             </div>
@@ -584,111 +512,15 @@
             <div class="footer-bottom">
                 <p>&copy; 2026 NetSolve Infrastructure. All rights reserved.</p>
                 <div class="legal-links">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
-                    <a href="#">SLA Guarantee</a>
+                    <a href="./404.html">Privacy Policy</a>
+                    <a href="./404.html">Terms of Service</a>
+                    <a href="./404.html">SLA Guarantee</a>
                 </div>
             </div>
         </div>
     </footer>
 
     <script src="./script.js"></script>
-    <script>
-        // Hero Slider
-        const slides = document.querySelectorAll(".hero-slide");
-        const slideBtns = document.querySelectorAll(".slide-btn");
-        let currentSlide = 0;
-        let slideInterval;
-
-        function showSlide(index) {
-            slides.forEach(slide => slide.classList.remove('active'));
-            slideBtns.forEach(btn => btn.classList.remove('active'));
-            slides[index].classList.add('active');
-            slideBtns[index].classList.add('active');
-            currentSlide = index;
-        }
-
-        function nextSlide() {
-            let next = (currentSlide + 1) % slides.length;
-            showSlide(next);
-        }
-
-        function startSlider() {
-            slideInterval = setInterval(nextSlide, 6000);
-        }
-
-        slideBtns.forEach((btn, index) => {
-            btn.addEventListener('click', () => {
-                clearInterval(slideInterval);
-                showSlide(index);
-                startSlider();
-            });
-        });
-
-        startSlider();
-
-        // Speed Gauge Animation
-        const speedObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const path = document.getElementById('speed-path');
-                    path.style.strokeDashoffset = "25";
-                    
-                    const numDisplay = document.getElementById('speed-number');
-                    let count = 0;
-                    const target = 999;
-                    const duration = 2000;
-                    const increment = target / (duration / 16);
-
-                    const updateCount = () => {
-                        count += increment;
-                        if (count < target) {
-                            numDisplay.innerText = Math.ceil(count);
-                            requestAnimationFrame(updateCount);
-                        } else {
-                            numDisplay.innerText = target;
-                        }
-                    };
-                    updateCount();
-                    speedObserver.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.5 });
-
-        speedObserver.observe(document.getElementById('speed-section'));
-
-        // Mobile Menu
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const navMenu = document.getElementById('nav-menu');
-
-        mobileMenuBtn.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-        });
-
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
-        });
-
-        // Counter Animation on Scroll
-        const counterObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate');
-                }
-            });
-        }, { threshold: 0.5 });
-
-        document.querySelectorAll('.coverage-stat').forEach(stat => {
-            counterObserver.observe(stat);
-        });
-    </script>
 </body>
 
 </html>

@@ -1,0 +1,538 @@
+ .support-hero {
+    padding: 160px 5% 100px;
+    background-color: var(--bg-dark);
+    min-height: 70vh;
+     align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Status Ticker */
+.status-ticker {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(222, 255, 0, 0.05);
+    padding: 8px 20px;
+    border: 1px solid rgba(222, 255, 0, 0.2);
+    border-radius: 50px;
+    margin-bottom: 40px;
+}
+
+.ticker-text {
+    font-family: monospace;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    color: var(--text-muted);
+}
+
+.support-hero-content h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+/* --- Command Search Bar --- */
+.command-search {
+    max-width: 700px;
+    margin: 40px auto 20px;
+    display: flex;
+    align-items: center;
+    background: #0a0a0a;
+    border: 1px solid #1a1a1a;
+    padding: 8px;
+    transition: var(--transition);
+}
+
+.command-search:focus-within {
+    border-color: var(--primary);
+    box-shadow: 0 0 20px var(--primary-glow);
+}
+
+.prompt-icon {
+    margin: 0 15px;
+    color: var(--primary);
+}
+
+.command-search input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: white;
+    padding: 12px;
+    font-family: var(--font-main);
+    outline: none;
+}
+
+/* --- Quick Tags --- */
+.quick-tags {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.quick-tags a {
+    color: var(--primary);
+    text-decoration: none;
+    margin-left: 10px;
+    border-bottom: 1px solid transparent;
+}
+
+.quick-tags a:hover {
+    border-bottom: 1px solid var(--primary);
+}
+
+/* =========================================
+   768px MEDIA QUERY (Desktop View)
+   ========================================= */
+@media screen and (min-width: 768px) {
+    .support-hero-content h1 {
+        font-size: 5rem;
+    }
+
+    .command-search {
+        padding: 10px 15px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* --- Support Nodes Section --- */
+.support-nodes-section {
+    padding: 80px 5%;
+    background-color: var(--bg-dark);
+}
+
+.nodes-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: -50px;
+    /* Overlap with hero slightly for flow */
+    position: relative;
+    z-index: 20;
+}
+
+.support-card {
+    background: #0a0a0a;
+    border: 1px solid #1a1a1a;
+    padding: 40px;
+    position: relative;
+    transition: var(--transition);
+}
+
+.card-access {
+    font-family: monospace;
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.support-card h3 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.support-card p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.btn-text-lime {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+}
+
+/* --- Hover State --- */
+.support-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.btn-text-lime:hover {
+    gap: 15px;
+    /* Subtle arrow slide */
+}
+
+/* =========================================
+   768px MEDIA QUERY (Desktop View)
+   ========================================= */
+@media screen and (min-width: 768px) {
+    .nodes-wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1200px;
+        margin: -80px auto 0;
+        gap: 30px;
+    }
+
+    .support-card {
+        padding: 50px 40px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* --- Support Uplink Styles --- */
+.support-uplink-section {
+    padding: 100px 5%;
+    background-color: var(--bg-dark);
+}
+
+.uplink-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 50px;
+}
+
+.uplink-card {
+    background: #050505;
+    border: 1px solid #1a1a1a;
+    padding: 40px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.uplink-icon {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.uplink-card h3 {
+    font-size: 1.4rem;
+    color: #fff;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.uplink-card p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+}
+
+.uplink-value {
+    display: block;
+    font-family: monospace;
+    font-size: 1.2rem;
+    color: var(--primary);
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(222, 255, 0, 0.05);
+    padding: 5px 12px;
+    border-radius: 50px;
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+}
+
+.btn-neon-small {
+    padding: 10px 25px;
+    background: var(--primary);
+    border: none;
+    color: #000;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.btn-neon-small:hover {
+    box-shadow: 0 0 20px var(--primary-glow);
+}
+
+/* --- Hover Effects --- */
+.uplink-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-5px);
+}
+
+/* =========================================
+   768px MEDIA QUERY (The Console View)
+   ========================================= */
+@media screen and (min-width: 768px) {
+    .uplink-grid {
+        grid-template-columns: repeat(3, 1fr);
+        display: grid;
+        max-width: 1200px;
+        margin: 60px auto 0;
+        gap: 30px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* --- Support Info Grid --- */
+.support-info-grid {
+    padding: 100px 5%;
+    background-color: var(--bg-dark);
+    border-top: 1px solid #111;
+}
+
+.info-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.box-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.box-header i {
+    font-size: 1.8rem;
+    color: var(--primary);
+}
+
+.box-header h3 {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+}
+
+/* --- Maintenance List --- */
+.schedule-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.schedule-item {
+    display: flex;
+    align-items: center;
+    background: #0a0a0a;
+    padding: 20px;
+    border: 1px solid #1a1a1a;
+    gap: 20px;
+}
+
+.date-tag {
+    background: var(--primary);
+    color: #000;
+    font-weight: 900;
+    font-size: 0.75rem;
+    padding: 5px 10px;
+    min-width: 70px;
+    text-align: center;
+}
+
+.event-details strong {
+    display: block;
+    font-size: 1rem;
+}
+
+.event-details span {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.event-status {
+    margin-left: auto;
+    font-family: monospace;
+    font-size: 0.7rem;
+    color: var(--text-muted);
+}
+
+/* --- Community Forum --- */
+.community-box {
+    background: rgba(222, 255, 0, 0.02);
+    border: 1px solid var(--border-neon);
+    padding: 40px;
+}
+
+.forum-stats {
+    display: flex;
+    gap: 30px;
+    margin: 30px 0;
+}
+
+.f-stat strong {
+    font-size: 1.5rem;
+    color: var(--primary);
+    display: block;
+}
+
+.f-stat span {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+
+/* =========================================
+   768px MEDIA QUERY (Desktop Dual View)
+   ========================================= */
+@media screen and (min-width: 768px) {
+    .info-flex {
+        flex-direction: row;
+        max-width: 1200px;
+        margin: 0 auto;
+        gap: 80px;
+    }
+
+    .maintenance-box {
+        flex: 1.2;
+    }
+
+    .community-box {
+        flex: 0.8;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* --- Final Support CTA --- */
+.final-support-cta {
+    padding: 100px 5% 140px;
+    background-color: var(--bg-dark);
+}
+
+.cta-matrix-wrapper {
+    background: #080808;
+    border: 1px solid var(--border-neon);
+    padding: 40px;
+    position: relative;
+    /* Robotic/Hardware geometry */
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 95% 100%, 0 100%);
+}
+
+.cta-info h2 {
+    font-size: 2.5rem;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+/* --- Contact Tiles --- */
+.cta-tiles {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.mini-tile {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background: #000;
+    border: 1px solid #1a1a1a;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.mini-tile i {
+    font-size: 1.5rem;
+    color: var(--primary);
+}
+
+.tile-meta strong {
+    display: block;
+    color: #fff;
+    font-size: 0.95rem;
+}
+
+.tile-meta span {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+/* Highlighted Tile State */
+.highlight-tile {
+    border-color: var(--primary);
+    background: rgba(222, 255, 0, 0.05);
+}
+
+.mini-tile:hover {
+    border-color: var(--primary);
+    transform: translateX(10px);
+    box-shadow: -10px 0 20px rgba(222, 255, 0, 0.1);
+}
+
+/* =========================================
+   768px MEDIA QUERY (Desktop Split)
+   ========================================= */
+@media screen and (min-width: 768px) {
+    .cta-matrix-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 60px 80px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .cta-info {
+        flex: 1;
+    }
+
+    .cta-tiles {
+        flex: 1;
+        margin-top: 0;
+    }
+
+    .cta-info h2 {
+        font-size: 4.5rem;
+    }
+}

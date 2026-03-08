@@ -1,0 +1,497 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+
+:root {
+    --primary: #DEFF00;
+    --primary-dim: #b8d400;
+    --primary-glow: rgba(222, 255, 0, 0.4);
+
+    --grad-linear: linear-gradient(135deg, var(--primary) 0%, #000000 100%);
+    --grad-surface: linear-gradient(180deg, rgba(222, 255, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+    --grad-text: linear-gradient(to right, #DEFF00, #ffffff);
+
+    --bg-dark: #000000;
+    --bg-card: #121212;
+    --border-neon: rgba(222, 255, 0, 0.2);
+
+    --text-main: #FFFFFF;
+    --text-muted: #94A3B8;
+
+    --radius: 12px;
+    --font-main: 'Space Grotesk', sans-serif;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: var(--font-main);
+    line-height: 1.6;
+}
+
+
+
+
+
+.btn-neon {
+    background: var(--primary);
+    color: var(--black);
+    padding: 12px 28px;
+    border-radius: var(--radius);
+    font-weight: 700;
+    text-transform: uppercase;
+    border: none;
+    box-shadow: var(--neon-glow);
+    transition: 0.3s;
+}
+
+.btn-neon:hover {
+    background: white;
+    transform: scale(1.05);
+}
+
+
+
+
+
+
+
+:root {
+    --fs-h1: 2.5rem;
+    --fs-h2: 2rem;
+    --fs-h3: 1.5rem;
+    --fs-h4: 1.25rem;
+    --fs-h5: 1.125rem;
+    --fs-h6: 1rem;
+
+    --fs-p: 1rem;
+    --fs-p-sm: 0.875rem;
+
+    --lh-heading: 1.2;
+    --lh-body: 1.6;
+}
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--text-main);
+    line-height: var(--lh-heading);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: var(--fs-h1);
+    letter-spacing: -0.02em;
+}
+
+h2 {
+    font-size: var(--fs-h2);
+    border-left: 4px solid var(--primary-orange);
+    padding-left: 15px;
+}
+
+h3 {
+    font-size: var(--fs-h3);
+}
+
+p {
+    font-size: var(--fs-p);
+    line-height: var(--lh-body);
+    color: var(--text-muted);
+    margin-bottom: 1.25rem;
+    max-width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.cyber-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 0;
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-neon);
+    z-index: 1000;
+}
+
+.nav-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--text-white);
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: var(--primary);
+}
+
+.hamburger {
+    display: block;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: var(--primary);
+    transition: var(--transition);
+}
+
+.nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    flex-direction: column;
+    background: var(--bg-dark);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    transition: 0.5s ease;
+}
+
+.nav-menu.active {
+    left: 0;
+}
+
+.nav-links {
+    list-style: none;
+    text-align: center;
+}
+
+.nav-links li {
+    margin: 20px 0;
+}
+
+.nav-links a {
+    color: var(--text-main);
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--primary);
+    text-shadow: 0 0 10px var(--primary-glow);
+}
+
+.btn-neon {
+    background: var(--grad-linear);
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    box-shadow: 0 0 15px var(--primary-glow);
+}
+
+@media screen and (min-width: 768px) {
+    .hamburger {
+        display: none;
+    }
+
+    .nav-menu {
+        position: static;
+        flex-direction: row;
+        width: auto;
+        height: auto;
+        background: transparent;
+        gap: 40px;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 30px;
+    }
+
+    .nav-links li {
+        margin: 0;
+    }
+
+    .nav-links a {
+        font-size: 1rem;
+    }
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.section-header-v2 {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 60px;
+    padding: 0 20px;
+}
+
+.cyber-tag {
+    display: inline-block;
+    color: var(--primary);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+    padding: 5px 15px;
+    border: 1px solid rgba(222, 255, 0, 0.3);
+    position: relative;
+}
+
+.cyber-tag::before,
+.cyber-tag::after {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border: 1px solid var(--primary);
+}
+
+.cyber-tag::before {
+    top: -1px;
+    left: -1px;
+    border-right: 0;
+    border-bottom: 0;
+}
+
+.cyber-tag::after {
+    bottom: -1px;
+    right: -1px;
+    border-left: 0;
+    border-top: 0;
+}
+
+ .section-header-v2 h2 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: var(--text-main);
+    line-height: 1.2;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.lime-text {
+    color: var(--primary);
+    text-shadow: 0 0 15px var(--primary-glow);
+}
+
+ .section-header-v2 p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+    .section-header-v2 {
+        margin-bottom: 80px;
+    }
+
+    .section-header-v2 h2 {
+        font-size: 4rem;
+        letter-spacing: -1px;
+    }
+
+    .section-header-v2 p {
+        font-size: 1.2rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- CTA Section --- */
+.final-conversion {
+    padding: 80px 5%;
+    background-color: var(--bg-dark);
+    position: relative;
+}
+
+.cta-cyber-card {
+    background: #0a0a0a;
+    border: 1px solid var(--primary);
+    padding: 50px 30px;
+    text-align: center;
+    box-shadow: 0 0 30px var(--primary-glow);
+    clip-path: polygon(0 0, 95% 0, 100% 15%, 100% 100%, 5% 100%, 0 85%);
+}
+
+.cta-input-group {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.cta-input-group input {
+    background: #111;
+    border: 1px solid #333;
+    padding: 15px;
+    color: white;
+    border-radius: 4px;
+    outline: none;
+}
+
+.cta-input-group input:focus {
+    border-color: var(--primary);
+}
+
+/* --- Footer Section --- */
+.cyber-footer {
+    background: #000;
+    padding: 80px 5% 20px;
+    border-top: 1px solid #1a1a1a;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 40px;
+}
+
+.footer-col h4 {
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 12px;
+}
+
+.footer-col ul li a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+    color: var(--primary);
+    padding-left: 5px;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.footer-socials a {
+    color: var(--text-muted);
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+.footer-socials a:hover {
+    color: var(--primary);
+}
+
+.footer-bottom {
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 1px solid #1a1a1a;
+    text-align: center;
+    font-family: monospace;
+    font-size: 0.7rem;
+    color: #444;
+}
+
+/* =========================================
+   768px MEDIA QUERY (Desktop View)
+   ========================================= */
+@media screen and (min-width: 768px) {
+    .cta-cyber-card {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+        padding: 60px 80px;
+    }
+
+    .cta-input-group {
+        flex-direction: row;
+        background: #111;
+        padding: 5px;
+        border: 1px solid #333;
+        border-radius: 50px;
+    }
+
+    .cta-input-group input {
+        border: none;
+        background: transparent;
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(5, 1fr);
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}

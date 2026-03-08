@@ -1,0 +1,427 @@
+/* --- Contact Section Styles --- */
+.contact-page {
+    padding: 100px 5%;
+    background-color: var(--bg-main);
+}
+
+.contact-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 60px;
+}
+
+/* --- Info Cards --- */
+.info-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: var(--radius);
+    margin-bottom: 20px;
+    box-shadow: var(--shadow-sm);
+    transition: 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateX(10px);
+    border-left: 5px solid var(--primary-orange);
+}
+
+.info-icon {
+    font-size: 1.8rem;
+    color: var(--primary-orange);
+}
+
+.info-details h4 {
+    color: var(--navy);
+    margin-bottom: 5px;
+}
+
+.info-details p {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+}
+
+/* --- Form Styling --- */
+.contact-form-container {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-md);
+}
+
+.main-contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.main-contact-form input, 
+.main-contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    background: var(--bg-main);
+    font-family: inherit;
+}
+
+.main-contact-form input:focus, 
+.main-contact-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-orange);
+    background: #fff;
+}
+
+/* =========================================
+   768px MEDIA QUERY (The Desktop Split)
+   ========================================= */
+@media screen and (min-width: 768px) {
+    .contact-wrapper {
+        flex-direction: row; /* Horizontal split */
+        align-items: stretch;
+        max-width: 1200px;
+        margin: 60px auto 0;
+    }
+
+    .contact-info {
+        flex: 1;
+    }
+
+    .contact-form-container {
+        flex: 1.5; /* Form gets more space */
+    }
+
+    .form-row {
+        display: flex;
+        gap: 20px;
+    }
+
+    .section-header h2 {
+        font-size: 3.5rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- Locations Section Styles --- */
+.locations-section {
+    padding: 100px 5%;
+    background-color: var(--bg-subtle); /* Pure White */
+}
+
+.city-selector {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.city-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background: var(--bg-main);
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.city-card i { color: var(--text-muted); }
+
+.city-card.active {
+    border-color: var(--primary-orange);
+    background: #fff;
+    box-shadow: var(--shadow-sm);
+}
+
+.city-card.active i { color: var(--primary-orange); }
+
+.city-card strong { display: block; color: var(--navy); }
+
+/* --- Network Map Styling --- */
+.network-map-container {
+    position: relative;
+    margin-top: 50px;
+}
+
+.network-map-container img {
+    width: 100%;
+    border-radius: var(--radius);
+    filter: grayscale(100%) brightness(0.8);
+    transition: 0.5s;
+}
+
+.network-map-container:hover img {
+    filter: grayscale(0%) brightness(1);
+}
+
+.map-overlay {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 5;
+}
+
+.status-badge {
+    background: var(--navy);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.pulse-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--success);
+    border-radius: 50%;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+    70% { transform: scale(1.2); box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+/* =========================================
+   768px MEDIA QUERY (Desktop Map View)
+   ========================================= */
+@media screen and (min-width: 768px) {
+    .locations-grid {
+        display: flex;
+        align-items: center;
+        gap: 80px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .location-list-container { flex: 1; }
+    .network-map-container { flex: 1.2; margin-top: 0; }
+
+    .location-list-container h2 {
+        font-size: 3rem;
+    }
+}
+
+
+
+
+
+
+
+/* --- FAQ Section Styles --- */
+.faq-section {
+    padding: 100px 5%;
+    background-color: var(--bg-main); /* Premium Light Gray */
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 50px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.faq-item {
+    background: #ffffff;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+}
+
+.faq-question {
+    width: 100%;
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--navy); /* Professional Anchor Color */
+    transition: 0.3s;
+}
+
+.faq-question i {
+    color: var(--primary-orange);
+    transition: transform 0.3s ease;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    background: #f9f9f9;
+}
+
+.faq-answer p {
+    padding: 0 25px 25px;
+    margin: 0;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* --- Active State (Controlled via JS or :focus-within) --- */
+.faq-item:hover .faq-question {
+    background-color: rgba(255, 107, 0, 0.05);
+}
+
+/* =========================================
+   768px MEDIA QUERY (Desktop Spacing)
+   ========================================= */
+@media screen and (min-width: 768px) {
+    .faq-section {
+        padding: 140px 0;
+    }
+
+    .section-header h2 {
+        font-size: 3.5rem;
+    }
+
+    .faq-question {
+        padding: 30px;
+        font-size: 1.25rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* --- Final CTA Styles --- */
+.final-cta {
+    padding: 100px 5%;
+    background-color: var(--navy); /* Your root navy color */
+    background-image: radial-gradient(circle at top right, rgba(255, 107, 0, 0.15), transparent);
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-glass-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 60px 40px;
+    border-radius: var(--radius);
+    text-align: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.badge-white {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.final-cta h2 {
+    color: #fff;
+    font-size: var(--fs-h2);
+    margin: 25px 0;
+}
+
+.highlight-orange {
+    color: var(--primary-orange);
+}
+
+.final-cta p {
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
+
+/* --- Form & Actions --- */
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto 25px;
+}
+
+.newsletter-form input {
+    padding: 15px 20px;
+    border-radius: var(--radius);
+    border: none;
+    background: #fff;
+    font-size: 1rem;
+}
+
+.cta-support {
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+.cta-support a {
+    color: var(--primary-orange);
+    text-decoration: none;
+    font-weight: 700;
+    margin-left: 10px;
+}
+
+/* =========================================
+   768px MEDIA QUERY (Desktop Alignment)
+   ========================================= */
+@media screen and (min-width: 768px) {
+    .final-cta {
+        padding: 140px 0;
+    }
+
+    .cta-glass-card {
+        padding: 80px;
+    }
+
+    .newsletter-form {
+        flex-direction: row; /* Horizontal form on desktop */
+        background: #fff;
+        padding: 5px;
+        border-radius: 50px; /* Rounded pill style */
+    }
+
+    .newsletter-form input {
+        flex: 1;
+        background: transparent;
+    }
+
+    .newsletter-form .btn-primary {
+        border-radius: 50px;
+        padding: 12px 35px;
+    }
+
+    .final-cta h2 {
+        font-size: 3.5rem;
+    }
+}
