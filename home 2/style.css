@@ -1,3 +1,73 @@
+.dropdown{
+    position: relative;
+}
+
+.home-link {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.dropdown-arrow {
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.dropdown-menu{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    list-style: none;
+     min-width: 180px;
+    display: none;
+}
+
+.dropdown-menu li a{
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: black;
+}
+
+.dropdown-menu li a:hover{
+    background-color: var(--bg-dark);
+}
+
+.dropdown.show .dropdown-menu{
+    display: block;
+}
+
+@media screen and (max-width:768px){
+
+.dropdown{
+    width: 100%;
+}
+
+.home-link{
+    justify-content: space-between;
+    width: 100%;
+}
+
+.dropdown-menu{
+    position: static;
+    width: 100%;
+    background-color: #111;
+}
+
+.dropdown-menu li a{
+    color: white;
+    padding: 12px 15px;
+}
+
+}
+
+
+
+
+
+
+
 .cyber-hero {
     position: relative;
     padding: 160px 5% 100px;
@@ -321,6 +391,10 @@
     overflow: hidden;
     border-radius: var(--radius);
 }
+
+.map-container img{
+    height: 50vh;
+ }
 
 .cyber-map {
     width: 100%;

@@ -8,8 +8,7 @@
     overflow: hidden;
 }
 
-/* Status Ticker */
-.status-ticker {
+ .status-ticker {
     display: inline-flex;
     align-items: center;
     gap: 12px;
@@ -33,8 +32,7 @@
     margin-bottom: 20px;
 }
 
-/* --- Command Search Bar --- */
-.command-search {
+ .command-search {
     max-width: 700px;
     margin: 40px auto 20px;
     display: flex;
@@ -65,8 +63,7 @@
     outline: none;
 }
 
-/* --- Quick Tags --- */
-.quick-tags {
+ .quick-tags {
     font-size: 0.8rem;
     color: var(--text-muted);
 }
@@ -82,9 +79,6 @@
     border-bottom: 1px solid var(--primary);
 }
 
-/* =========================================
-   768px MEDIA QUERY (Desktop View)
-   ========================================= */
 @media screen and (min-width: 768px) {
     .support-hero-content h1 {
         font-size: 5rem;
@@ -104,8 +98,7 @@
 
 
 
-/* --- Support Nodes Section --- */
-.support-nodes-section {
+ .support-nodes-section {
     padding: 80px 5%;
     background-color: var(--bg-dark);
 }
@@ -115,8 +108,7 @@
     flex-direction: column;
     gap: 30px;
     margin-top: -50px;
-    /* Overlap with hero slightly for flow */
-    position: relative;
+     position: relative;
     z-index: 20;
 }
 
@@ -168,8 +160,7 @@
     transition: 0.3s;
 }
 
-/* --- Hover State --- */
-.support-card:hover {
+ .support-card:hover {
     border-color: var(--primary);
     transform: translateY(-10px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
@@ -177,12 +168,8 @@
 
 .btn-text-lime:hover {
     gap: 15px;
-    /* Subtle arrow slide */
-}
+ }
 
-/* =========================================
-   768px MEDIA QUERY (Desktop View)
-   ========================================= */
 @media screen and (min-width: 768px) {
     .nodes-wrapper {
         display: grid;
@@ -206,8 +193,7 @@
 
 
 
-/* --- Support Uplink Styles --- */
-.support-uplink-section {
+ .support-uplink-section {
     padding: 100px 5%;
     background-color: var(--bg-dark);
 }
@@ -286,15 +272,11 @@
     box-shadow: 0 0 20px var(--primary-glow);
 }
 
-/* --- Hover Effects --- */
-.uplink-card:hover {
+ .uplink-card:hover {
     border-color: var(--primary);
     transform: translateY(-5px);
 }
 
-/* =========================================
-   768px MEDIA QUERY (The Console View)
-   ========================================= */
 @media screen and (min-width: 768px) {
     .uplink-grid {
         grid-template-columns: repeat(3, 1fr);
@@ -314,8 +296,7 @@
 
 
 
-/* --- Support Info Grid --- */
-.support-info-grid {
+ .support-info-grid {
     padding: 100px 5%;
     background-color: var(--bg-dark);
     border-top: 1px solid #111;
@@ -344,8 +325,7 @@
     text-transform: uppercase;
 }
 
-/* --- Maintenance List --- */
-.schedule-list {
+ .schedule-list {
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -387,8 +367,7 @@
     color: var(--text-muted);
 }
 
-/* --- Community Forum --- */
-.community-box {
+ .community-box {
     background: rgba(222, 255, 0, 0.02);
     border: 1px solid var(--border-neon);
     padding: 40px;
@@ -412,9 +391,6 @@
     color: var(--text-muted);
 }
 
-/* =========================================
-   768px MEDIA QUERY (Desktop Dual View)
-   ========================================= */
 @media screen and (min-width: 768px) {
     .info-flex {
         flex-direction: row;
@@ -442,8 +418,7 @@
 
 
 
-/* --- Final Support CTA --- */
-.final-support-cta {
+ .final-support-cta {
     padding: 100px 5% 140px;
     background-color: var(--bg-dark);
 }
@@ -453,8 +428,7 @@
     border: 1px solid var(--border-neon);
     padding: 40px;
     position: relative;
-    /* Robotic/Hardware geometry */
-    clip-path: polygon(0 0, 100% 0, 100% 90%, 95% 100%, 0 100%);
+     clip-path: polygon(0 0, 100% 0, 100% 90%, 95% 100%, 0 100%);
 }
 
 .cta-info h2 {
@@ -463,8 +437,7 @@
     margin-bottom: 20px;
 }
 
-/* --- Contact Tiles --- */
-.cta-tiles {
+ .cta-tiles {
     display: grid;
     grid-template-columns: 1fr;
     gap: 15px;
@@ -498,8 +471,7 @@
     color: var(--text-muted);
 }
 
-/* Highlighted Tile State */
-.highlight-tile {
+ .highlight-tile {
     border-color: var(--primary);
     background: rgba(222, 255, 0, 0.05);
 }
@@ -510,9 +482,7 @@
     box-shadow: -10px 0 20px rgba(222, 255, 0, 0.1);
 }
 
-/* =========================================
-   768px MEDIA QUERY (Desktop Split)
-   ========================================= */
+
 @media screen and (min-width: 768px) {
     .cta-matrix-wrapper {
         display: flex;
