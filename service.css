@@ -1,13 +1,12 @@
-/* --- Services Hero Base Styles --- */
 .services-hero {
     padding: 80px 5% 60px;
-    background-color: var(--bg-main); /* Premium Light Gray */
+    background-color: var(--bg-main);
     overflow: hidden;
 }
 
 .hero-grid {
     display: flex;
-    flex-direction: column; /* Mobile Stack */
+    flex-direction: column;
     gap: 40px;
     align-items: center;
 }
@@ -23,7 +22,6 @@
     color: var(--navy);
 }
 
-/* Button Group */
 .hero-actions {
     display: flex;
     gap: 20px;
@@ -45,7 +43,6 @@
     color: var(--primary-orange);
 }
 
-/* Visual Container */
 .image-container {
     position: relative;
     width: 100%;
@@ -58,7 +55,6 @@
     border-left: 8px solid var(--primary-orange);
 }
 
-/* Floating Glassmorphism Card */
 .glass-stat {
     position: absolute;
     top: 20px;
@@ -93,16 +89,13 @@
     color: var(--text-muted);
 }
 
-/* =========================================
-   768px MEDIA QUERY (Desktop View)
-   ========================================= */
 @media screen and (min-width: 768px) {
     .services-hero {
         padding: 140px 5%;
     }
 
     .hero-grid {
-        flex-direction: row; /* Side-by-side */
+        flex-direction: row;
         text-align: left;
         max-width: 1200px;
         margin: 0 auto;
@@ -118,7 +111,7 @@
     }
 
     .hero-text h1 {
-        font-size: 4rem; /* Larger Impact */
+        font-size: 4rem;
     }
 
     .hero-actions {
@@ -126,7 +119,7 @@
     }
 
     .glass-stat {
-        top: -30px; /* Overlap effect */
+        top: -30px;
         right: -20px;
     }
 }
@@ -140,12 +133,9 @@
 
 
 
-
-
-/* --- Services Grid Section --- */
 .services-grid-section {
     padding: 80px 5%;
-    background-color: var(--bg-subtle); /* White background */
+    background-color: var(--bg-subtle);
 }
 
 .section-info {
@@ -153,17 +143,18 @@
     margin-bottom: 60px;
 }
 
-.navy-text { color: var(--navy); }
+.navy-text {
+    color: var(--navy);
+}
 
-/* --- Service Card Styling --- */
 .services-wrapper {
     display: grid;
-    grid-template-columns: 1fr; /* Mobile Stack */
+    grid-template-columns: 1fr;
     gap: 30px;
 }
 
 .service-card {
-    background: var(--bg-main); /* Light Gray */
+    background: var(--bg-main);
     padding: 50px 35px;
     border-radius: var(--radius);
     border: 1px solid var(--border-color);
@@ -218,7 +209,6 @@
     transition: 0.3s;
 }
 
-/* --- Featured Card Logic --- */
 .service-card.featured {
     background: var(--navy);
     color: white;
@@ -226,7 +216,7 @@
     transform: scale(1.02);
 }
 
-.service-card.featured h3, 
+.service-card.featured h3,
 .service-card.featured p,
 .service-card.featured .card-list li {
     color: white;
@@ -238,16 +228,13 @@
     border-color: var(--primary-orange);
 }
 
-/* =========================================
-   768px MEDIA QUERY (The Professional Grid)
-   ========================================= */
 @media screen and (min-width: 768px) {
     .services-grid-section {
         padding: 120px 5%;
     }
 
     .services-wrapper {
-        grid-template-columns: repeat(3, 1fr); /* 3 Columns */
+        grid-template-columns: repeat(3, 1fr);
         max-width: 1200px;
         margin: 0 auto;
     }
@@ -265,10 +252,9 @@
 
 
 
-/* --- Process Section Styles --- */
 .process-section {
     padding: 100px 5%;
-    background-color: var(--bg-main); /* Premium Light Gray */
+    background-color: var(--bg-main);
     text-align: center;
 }
 
@@ -312,12 +298,9 @@
     margin-bottom: 10px;
 }
 
-/* =========================================
-   768px MEDIA QUERY (Horizontal Timeline)
-   ========================================= */
 @media screen and (min-width: 768px) {
     .process-steps {
-        flex-direction: row; /* Side-by-side */
+        flex-direction: row;
         justify-content: space-between;
     }
 
@@ -326,7 +309,6 @@
         padding: 50px 20px;
     }
 
-    /* Adding connecting lines between steps */
     .step-item:not(:last-child)::after {
         content: '→';
         position: absolute;
@@ -355,7 +337,6 @@
 
 
 
-/* --- Pricing Section Styles --- */
 .pricing-section {
     padding: 100px 5%;
     background-color: var(--bg-subtle);
@@ -406,18 +387,25 @@
 
 .price-features li {
     padding: 12px 0;
-    border-bottom: 1px solid rgba(0,0,0,0.05);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     font-size: 0.95rem;
     display: flex;
     align-items: center;
     gap: 12px;
 }
 
-.price-features i { color: var(--primary-orange); }
-.price-features li.disabled { color: #ccc; }
-.price-features li.disabled i { color: #ccc; }
+.price-features i {
+    color: var(--primary-orange);
+}
 
-/* Popular Card Styling */
+.price-features li.disabled {
+    color: #ccc;
+}
+
+.price-features li.disabled i {
+    color: #ccc;
+}
+
 .price-card.popular {
     background: #ffffff;
     border: 2px solid var(--primary-orange);
@@ -454,12 +442,9 @@
     color: white;
 }
 
-/* =========================================
-   768px MEDIA QUERY (Desktop Comparison)
-   ========================================= */
 @media screen and (min-width: 768px) {
     .pricing-grid {
-        flex-direction: row; /* Horizontal cards */
+        flex-direction: row;
         align-items: center;
         max-width: 1100px;
         margin: 80px auto 0;
@@ -470,7 +455,7 @@
     }
 
     .price-card.popular {
-        z-index: 2; /* Keeps the middle card on top */
+        z-index: 2;
     }
 }
 
@@ -481,8 +466,7 @@
 
 
 
-/* --- Coverage Section Styles --- */
-.coverage-section {
+ .coverage-section {
     padding: 100px 5%;
     background: linear-gradient(135deg, var(--navy) 50%, var(--bg-main) 50%);
 }
@@ -501,8 +485,7 @@
     margin: 15px 0 25px;
 }
 
-/* --- Form Styling --- */
-.coverage-form {
+ .coverage-form {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -544,17 +527,14 @@
     color: var(--text-muted);
 }
 
-/* =========================================
-   768px MEDIA QUERY (The Horizontal Form)
-   ========================================= */
 @media screen and (min-width: 768px) {
     .coverage-section {
         padding: 140px 0;
     }
 
     .coverage-form {
-        flex-direction: row; /* Aligns inputs in a single line */
-        align-items: stretch;
+        flex-direction: row;
+         align-items: stretch;
     }
 
     .input-group {
@@ -570,4 +550,23 @@
     .coverage-content h2 {
         font-size: 3rem;
     }
+}
+
+
+
+
+
+
+
+
+.main-footer .container{
+    margin: 0 auto;
+
+}
+
+.main-footer .container .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+    margin-bottom: 50px;
 }

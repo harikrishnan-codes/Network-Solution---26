@@ -1,5 +1,4 @@
-/* --- Contact Section Styles --- */
-.contact-page {
+ .contact-page {
     padding: 100px 5%;
     background-color: var(--bg-main);
 }
@@ -11,8 +10,7 @@
     margin-top: 60px;
 }
 
-/* --- Info Cards --- */
-.info-card {
+ .info-card {
     display: flex;
     align-items: flex-start;
     gap: 20px;
@@ -44,8 +42,7 @@
     font-size: 0.9rem;
 }
 
-/* --- Form Styling --- */
-.contact-form-container {
+ .contact-form-container {
     background: #ffffff;
     padding: 40px;
     border-radius: var(--radius);
@@ -58,7 +55,7 @@
     gap: 20px;
 }
 
-.main-contact-form input, 
+.main-contact-form input,
 .main-contact-form textarea {
     width: 100%;
     padding: 15px;
@@ -68,20 +65,17 @@
     font-family: inherit;
 }
 
-.main-contact-form input:focus, 
+.main-contact-form input:focus,
 .main-contact-form textarea:focus {
     outline: none;
     border-color: var(--primary-orange);
     background: #fff;
 }
 
-/* =========================================
-   768px MEDIA QUERY (The Desktop Split)
-   ========================================= */
 @media screen and (min-width: 768px) {
     .contact-wrapper {
-        flex-direction: row; /* Horizontal split */
-        align-items: stretch;
+        flex-direction: row;
+         align-items: stretch;
         max-width: 1200px;
         margin: 60px auto 0;
     }
@@ -91,8 +85,8 @@
     }
 
     .contact-form-container {
-        flex: 1.5; /* Form gets more space */
-    }
+        flex: 1.5;
+     }
 
     .form-row {
         display: flex;
@@ -115,11 +109,10 @@
 
 
 
-/* --- Locations Section Styles --- */
-.locations-section {
+ .locations-section {
     padding: 100px 5%;
-    background-color: var(--bg-subtle); /* Pure White */
-}
+    background-color: var(--bg-subtle);
+ }
 
 .city-selector {
     display: flex;
@@ -140,7 +133,9 @@
     border: 1px solid transparent;
 }
 
-.city-card i { color: var(--text-muted); }
+.city-card i {
+    color: var(--text-muted);
+}
 
 .city-card.active {
     border-color: var(--primary-orange);
@@ -148,12 +143,16 @@
     box-shadow: var(--shadow-sm);
 }
 
-.city-card.active i { color: var(--primary-orange); }
+.city-card.active i {
+    color: var(--primary-orange);
+}
 
-.city-card strong { display: block; color: var(--navy); }
+.city-card strong {
+    display: block;
+    color: var(--navy);
+}
 
-/* --- Network Map Styling --- */
-.network-map-container {
+ .network-map-container {
     position: relative;
     margin-top: 50px;
 }
@@ -197,14 +196,22 @@
 }
 
 @keyframes pulse {
-    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
-    70% { transform: scale(1.2); box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
-    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+    }
+
+    70% {
+        transform: scale(1.2);
+        box-shadow: 0 0 0 10px rgba(16, 185, 129, 0);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+    }
 }
 
-/* =========================================
-   768px MEDIA QUERY (Desktop Map View)
-   ========================================= */
 @media screen and (min-width: 768px) {
     .locations-grid {
         display: flex;
@@ -214,8 +221,14 @@
         margin: 0 auto;
     }
 
-    .location-list-container { flex: 1; }
-    .network-map-container { flex: 1.2; margin-top: 0; }
+    .location-list-container {
+        flex: 1;
+    }
+
+    .network-map-container {
+        flex: 1.2;
+        margin-top: 0;
+    }
 
     .location-list-container h2 {
         font-size: 3rem;
@@ -228,11 +241,10 @@
 
 
 
-/* --- FAQ Section Styles --- */
-.faq-section {
+ .faq-section {
     padding: 100px 5%;
-    background-color: var(--bg-main); /* Premium Light Gray */
-}
+    background-color: var(--bg-main);
+ }
 
 .faq-container {
     max-width: 800px;
@@ -262,8 +274,8 @@
     text-align: left;
     font-size: 1.1rem;
     font-weight: 700;
-    color: var(--navy); /* Professional Anchor Color */
-    transition: 0.3s;
+    color: var(--navy);
+     transition: 0.3s;
 }
 
 .faq-question i {
@@ -285,14 +297,10 @@
     line-height: 1.6;
 }
 
-/* --- Active State (Controlled via JS or :focus-within) --- */
-.faq-item:hover .faq-question {
+ .faq-item:hover .faq-question {
     background-color: rgba(255, 107, 0, 0.05);
 }
 
-/* =========================================
-   768px MEDIA QUERY (Desktop Spacing)
-   ========================================= */
 @media screen and (min-width: 768px) {
     .faq-section {
         padding: 140px 0;
@@ -317,11 +325,10 @@
 
 
 
-/* --- Final CTA Styles --- */
-.final-cta {
+ .final-cta {
     padding: 100px 5%;
-    background-color: var(--navy); /* Your root navy color */
-    background-image: radial-gradient(circle at top right, rgba(255, 107, 0, 0.15), transparent);
+    background-color: var(--navy);
+     background-image: radial-gradient(circle at top right, rgba(255, 107, 0, 0.15), transparent);
     position: relative;
     overflow: hidden;
 }
@@ -363,8 +370,7 @@
     margin: 0 auto 40px;
 }
 
-/* --- Form & Actions --- */
-.newsletter-form {
+ .newsletter-form {
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -392,9 +398,6 @@
     margin-left: 10px;
 }
 
-/* =========================================
-   768px MEDIA QUERY (Desktop Alignment)
-   ========================================= */
 @media screen and (min-width: 768px) {
     .final-cta {
         padding: 140px 0;
@@ -405,11 +408,11 @@
     }
 
     .newsletter-form {
-        flex-direction: row; /* Horizontal form on desktop */
-        background: #fff;
+        flex-direction: row;
+         background: #fff;
         padding: 5px;
-        border-radius: 50px; /* Rounded pill style */
-    }
+        border-radius: 50px;
+     }
 
     .newsletter-form input {
         flex: 1;
