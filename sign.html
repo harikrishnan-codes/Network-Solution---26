@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,27 +9,26 @@
     <link rel="stylesheet" href="./sign.css">
     <link rel="stylesheet" href="./root.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
 
     <div class="auth-container">
-        <!-- Background Effects -->
         <div class="bg-effects">
             <div class="effect-orb orb-1"></div>
             <div class="effect-orb orb-2"></div>
         </div>
 
-        <!-- Auth Card -->
         <div class="auth-card">
-            <!-- Tab Navigation -->
-            <div class="auth-tabs">
+            <div class="auth-tabs" data-aos="fade-up"
+>
                 <button class="tab-btn active" onclick="switchTab('login')">Sign In</button>
                 <button class="tab-btn" onclick="switchTab('signup')">Sign Up</button>
             </div>
 
-            <!-- Login Form -->
-            <form class="auth-form active" id="loginForm">
+            <form class="auth-form active" id="loginForm" data-aos="fade-down">
                 <div class="form-header">
                     <h2>Welcome Back</h2>
                     <p>Sign in to manage your account</p>
@@ -56,19 +56,21 @@
                 </div>
 
                 <div class="form-options">
-                    <label class="checkbox-wrapper"><input type="checkbox" id="rememberMe"><span class="checkmark"></span>Remember me</label>
+                    <label class="checkbox-wrapper"><input type="checkbox" id="rememberMe"><span
+                            class="checkmark"></span>Remember me</label>
                     <a href="#" class="link-btn" onclick="switchTab('forgot'); return false;">Forgot Password?</a>
                 </div>
 
                 <button type="submit" class="btn-submit">Sign In</button>
 
                 <div class="form-footer">
-                    <p>Don't have an account? <a href="#" class="link-btn" onclick="switchTab('signup'); return false;">Sign Up</a></p>
+                    <p>Don't have an account? <a href="#" class="link-btn"
+                            onclick="switchTab('signup'); return false;">Sign Up</a></p>
                 </div>
             </form>
 
             <!-- Signup Form -->
-            <form class="auth-form" id="signupForm">
+            <form class="auth-form" id="signupForm" data-aos="slide-up">
                 <div class="form-header">
                     <h2>Create Account</h2>
                     <p>Join millions of users worldwide</p>
@@ -112,7 +114,9 @@
                     </div>
                     <span class="error-message" id="signupPasswordError"></span>
                     <div class="password-strength" id="passwordStrength">
-                        <div class="strength-bar"><div class="strength-fill"></div></div>
+                        <div class="strength-bar">
+                            <div class="strength-fill"></div>
+                        </div>
                         <span class="strength-text"></span>
                     </div>
                 </div>
@@ -122,7 +126,8 @@
                     <div class="input-wrapper password-wrapper">
                         <i class="fas fa-lock"></i>
                         <input type="password" id="signupConfirmPassword" placeholder="Confirm your password" required>
-                        <button type="button" class="toggle-password" onclick="togglePassword('signupConfirmPassword', this)">
+                        <button type="button" class="toggle-password"
+                            onclick="togglePassword('signupConfirmPassword', this)">
                             <i class="fas fa-eye"></i>
                         </button>
                     </div>
@@ -133,19 +138,21 @@
                     <label class="checkbox-wrapper">
                         <input type="checkbox" id="agreeTerms" required>
                         <span class="checkmark"></span>
-                        I agree to the <a href="#" class="link-text">Terms</a> and <a href="#" class="link-text">Privacy Policy</a>
+                        I agree to the <a href="#" class="link-text">Terms</a> and <a href="#" class="link-text">Privacy
+                            Policy</a>
                     </label>
                 </div>
 
                 <button type="submit" class="btn-submit">Create Account</button>
 
                 <div class="form-footer">
-                    <p>Already have an account? <a href="#" class="link-btn" onclick="switchTab('login'); return false;">Sign In</a></p>
+                    <p>Already have an account? <a href="#" class="link-btn"
+                            onclick="switchTab('login'); return false;">Sign In</a></p>
                 </div>
             </form>
 
             <!-- Forgot Password Form -->
-            <form class="auth-form" id="forgotForm">
+            <form class="auth-form" id="forgotForm" data-aos="slide-down">
                 <div class="form-header">
                     <div class="forgot-icon">
                         <i class="fas fa-key"></i>
@@ -166,7 +173,8 @@
                 <button type="submit" class="btn-submit">Send Reset Link</button>
 
                 <div class="form-footer">
-                    <p><a href="#" class="link-btn" onclick="switchTab('login'); return false;"><i class="fas fa-arrow-left"></i> Back to Login</a></p>
+                    <p><a href="#" class="link-btn" onclick="switchTab('login'); return false;"><i
+                                class="fas fa-arrow-left"></i> Back to Login</a></p>
                 </div>
             </form>
         </div>
@@ -184,21 +192,21 @@
             document.querySelectorAll('.auth-form').forEach(form => {
                 form.classList.remove('active');
             });
-            
+
             // Remove active class from all tabs
             document.querySelectorAll('.tab-btn').forEach(btn => {
                 btn.classList.remove('active');
             });
-            
+
             // Show selected form
             document.getElementById(tab + 'Form').classList.add('active');
-            
+
             // Add active class to clicked tab (for login and signup)
             if (tab === 'login' || tab === 'signup') {
                 const tabIndex = tab === 'login' ? 0 : 1;
                 document.querySelectorAll('.tab-btn')[tabIndex].classList.add('active');
             }
-            
+
             // Clear any validation errors
             document.querySelectorAll('.error-message').forEach(el => el.textContent = '');
             document.querySelectorAll('.input-group').forEach(el => el.classList.remove('error'));
@@ -208,7 +216,7 @@
         function togglePassword(inputId, btn) {
             const input = document.getElementById(inputId);
             const icon = btn.querySelector('i');
-            
+
             if (input.type === 'password') {
                 input.type = 'text';
                 icon.classList.remove('fa-eye');
@@ -246,7 +254,7 @@
         }
 
         // ==================== LOGIN FORM ====================
-        document.getElementById('loginForm').addEventListener('submit', function(e) {
+        document.getElementById('loginForm').addEventListener('submit', function (e) {
             e.preventDefault();
             let isValid = true;
 
@@ -285,7 +293,7 @@
         const strengthText = document.querySelector('.strength-text');
 
         if (signupPassword) {
-            signupPassword.addEventListener('input', function() {
+            signupPassword.addEventListener('input', function () {
                 const password = this.value;
                 const strength = calculatePasswordStrength(password);
                 updateStrengthIndicator(strength);
@@ -303,7 +311,7 @@
 
         function updateStrengthIndicator(strength) {
             strengthBar.style.width = strength + '%';
-            
+
             if (strength <= 25) {
                 strengthBar.style.backgroundColor = '#EF4444';
                 strengthText.textContent = 'Weak';
@@ -328,7 +336,7 @@
             }
         }
 
-        document.getElementById('signupForm').addEventListener('submit', function(e) {
+        document.getElementById('signupForm').addEventListener('submit', function (e) {
             e.preventDefault();
             let isValid = true;
 
@@ -400,7 +408,7 @@
         });
 
         // ==================== FORGOT PASSWORD FORM ====================
-        document.getElementById('forgotForm').addEventListener('submit', function(e) {
+        document.getElementById('forgotForm').addEventListener('submit', function (e) {
             e.preventDefault();
             let isValid = true;
 
@@ -419,10 +427,10 @@
             if (isValid) {
                 // Show success message and redirect to 404 page
                 alert('Password reset link has been sent to your email!');
-                
+
                 // Clear the forgot password form
                 document.getElementById('forgotEmail').value = '';
-                
+
                 // Redirect to 404.html
                 window.location.href = '404.html';
             }
@@ -430,15 +438,15 @@
 
         // ==================== INPUT FOCUS EFFECTS ====================
         document.querySelectorAll('.input-wrapper input').forEach(input => {
-            input.addEventListener('focus', function() {
+            input.addEventListener('focus', function () {
                 this.closest('.input-wrapper').classList.add('focused');
             });
-            
-            input.addEventListener('blur', function() {
+
+            input.addEventListener('blur', function () {
                 this.closest('.input-wrapper').classList.remove('focused');
             });
         });
     </script>
 </body>
-</html>
 
+</html>

@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="./support.css">
     <link rel="stylesheet" href="./root.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
         rel="stylesheet">
@@ -46,7 +48,7 @@
 
 
     <main>
-        <section class="support-hero">
+        <section class="support-hero" data-aos="fade-up">
             <div class="container">
                 <div class="status-ticker reveal-fade">
                     <span class="pulse-dot"></span>
@@ -60,7 +62,8 @@
                         across the V2 backbone.
                     </p>
 
-                    <form class="command-search reveal-up" style="animation-delay: 0.4s;" action="./404.html" method="GET">
+                    <form class="command-search reveal-up" style="animation-delay: 0.4s;" action="./404.html"
+                        method="GET">
                         <i class="fa-solid fa-terminal prompt-icon"></i>
                         <input type="text" placeholder="Search documentation (e.g., 'SFP+ Config')..." required>
                         <button class="btn-neon">Execute</button>
@@ -85,7 +88,7 @@
 
 
 
-        <section class="support-nodes-section">
+        <section class="support-nodes-section" data-aos="fade-down">
             <div class="container">
                 <div class="nodes-wrapper">
                     <div class="support-card reveal-up" style="--delay: 0.1s">
@@ -93,7 +96,8 @@
                         <div class="card-icon"><i class="fa-solid fa-credit-card"></i></div>
                         <h3>Billing & Account</h3>
                         <p>Manage subscriptions, update payment protocols, and view invoices.</p>
-                        <a href="./404.html" class="btn-text-lime">Access Node <i class="fa-solid fa-chevron-right"></i></a>
+                        <a href="./404.html" class="btn-text-lime">Access Node <i
+                                class="fa-solid fa-chevron-right"></i></a>
                     </div>
 
                     <div class="support-card reveal-up" style="--delay: 0.3s">
@@ -101,7 +105,8 @@
                         <div class="card-icon"><i class="fa-solid fa-gears"></i></div>
                         <h3>Technical Setup</h3>
                         <p>Configure your V2 Gateway, port forwarding, and network security.</p>
-                        <a href="./404.html" class="btn-text-lime">Access Node <i class="fa-solid fa-chevron-right"></i></a>
+                        <a href="./404.html" class="btn-text-lime">Access Node <i
+                                class="fa-solid fa-chevron-right"></i></a>
                     </div>
 
                     <div class="support-card reveal-up" style="--delay: 0.5s">
@@ -109,7 +114,8 @@
                         <div class="card-icon"><i class="fa-solid fa-bug-slash"></i></div>
                         <h3>Troubleshoot</h3>
                         <p>Diagnostic tools for latency spikes, jitter, and signal loss recovery.</p>
-                        <a href="./404.html" class="btn-text-lime">Access Node <i class="fa-solid fa-chevron-right"></i></a>
+                        <a href="./404.html" class="btn-text-lime">Access Node <i
+                                class="fa-solid fa-chevron-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -124,7 +130,7 @@
 
 
 
-        <section class="support-uplink-section">
+        <section class="support-uplink-section" data-aos="fade-up">
             <div class="container">
                 <div class="section-header-v2 reveal-up">
                     <span class="cyber-tag">Real-Time Support</span>
@@ -147,7 +153,8 @@
                         <div class="uplink-icon"><i class="fa-solid fa-comment-dots"></i></div>
                         <h3>Neural Chat</h3>
                         <p>Real-time text-based diagnostic support and file sharing.</p>
-                        <button class="btn-neon-small" onclick="window.location.href='./404.html'">Launch Console</button>
+                        <button class="btn-neon-small" onclick="window.location.href='./404.html'">Launch
+                            Console</button>
                         <div class="status-badge"><span class="pulse-dot"></span> Instant</div>
                     </div>
 
@@ -171,7 +178,7 @@
 
 
 
-        <section class="support-info-grid">
+        <section class="support-info-grid" data-aos="fade-down">
             <div class="container">
                 <div class="info-flex">
 
@@ -226,7 +233,7 @@
 
 
 
-        <section class="final-support-cta">
+        <section class="final-support-cta" data-aos="fade-up">
             <div class="container">
                 <div class="cta-matrix-wrapper reveal-up">
                     <div class="cta-info">
@@ -273,7 +280,7 @@
 
 
 
-        <section class="final-conversion">
+        <section class="final-conversion" data-aos="fade-down">
             <div class="container">
                 <div class="cta-cyber-card reveal-up">
                     <div class="cta-text">
@@ -288,6 +295,13 @@
                 </div>
             </div>
         </section>
+
+
+
+
+
+
+        
 
         <footer class="cyber-footer">
             <div class="container footer-grid">
@@ -352,7 +366,14 @@
 
     <script src="script.js"></script>
 
-    <script></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 900,
+            easing: 'ease-in-out',
+            once: true,   // animation runs only once
+        });
+    </script>
 </body>
 
 </html>

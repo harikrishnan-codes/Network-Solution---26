@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="./company.css">
     <link rel="stylesheet" href="./root.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
         rel="stylesheet">
@@ -46,7 +48,7 @@
 
 
     <main>
-        <section class="company-hero">
+        <section class="company-hero" data-aos="fade-up">
             <div class="glow-blur-top"></div>
 
             <div class="container hero-flex">
@@ -76,8 +78,7 @@
                 <div class="company-visual reveal-scale">
                     <div class="visual-frame">
                         <div class="circuit-overlay"></div>
-                        <img src="../assets/world.webp"
-                            alt="Digital Vision" class="vision-img">
+                        <img src="../assets/world.webp" alt="Digital Vision" class="vision-img">
                     </div>
                     <div class="floating-badge">
                         <span class="pulse-dot"></span> V2.CORE_ACTIVE
@@ -94,7 +95,7 @@
 
 
 
-        <section class="company-pillars">
+        <section class="company-pillars" data-aos="fade-down">
             <div class="container">
                 <div class="section-header-v2 reveal-up">
                     <span class="cyber-tag">Operational DNA</span>
@@ -151,7 +152,7 @@
 
 
 
-        <section class="company-timeline">
+        <section class="company-timeline" data-aos="fade-up">
             <div class="container">
                 <div class="section-header-v2 reveal-up">
                     <span class="cyber-tag">Our History</span>
@@ -207,7 +208,7 @@
 
 
 
-        <section class="team-section">
+        <section class="team-section" data-aos="fade-down">
             <div class="container">
                 <div class="section-header-v2 reveal-up">
                     <span class="cyber-tag">Human Infrastructure</span>
@@ -241,8 +242,7 @@
 
                     <div class="member-card reveal-up" style="--delay: 0.3s">
                         <div class="member-image">
-                            <img src="../assets/w1.webp"
-                                alt="CTO">
+                            <img src="../assets/w1.webp" alt="CTO">
                             <div class="image-overlay"></div>
                             <div class="member-socials">
                                 <a href="./404.html"><i class="fa-brands fa-linkedin"></i></a>
@@ -264,8 +264,7 @@
 
                     <div class="member-card reveal-up" style="--delay: 0.5s">
                         <div class="member-image">
-                            <img src="../assets/m2-testi.webp"
-                                alt="Ops">
+                            <img src="../assets/m2-testi.webp" alt="Ops">
                             <div class="image-overlay"></div>
                             <div class="member-socials">
                                 <a href="./404.html"><i class="fa-brands fa-linkedin"></i></a>
@@ -293,78 +292,79 @@
 
 
 
-        <section class="global-nodes-section">
-    <div class="container">
-        <div class="section-header-v2 reveal-up">
-            <span class="cyber-tag">Global Presence</span>
-            <h2>Strategic <span class="lime-text">Node Clusters</span></h2>
-            <p>Our infrastructure is strategically distributed across Tier-1 data centers to ensure maximum redundancy.</p>
-        </div>
-
-        <div class="nodes-grid">
-            <div class="node-card reveal-up" style="--delay: 0.1s">
-                <div class="node-header">
-                    <i class="fa-solid fa-satellite-dish"></i>
-                    <span class="node-status">ONLINE</span>
+        <section class="global-nodes-section" data-aos="fade-up">
+            <div class="container">
+                <div class="section-header-v2 reveal-up">
+                    <span class="cyber-tag">Global Presence</span>
+                    <h2>Strategic <span class="lime-text">Node Clusters</span></h2>
+                    <p>Our infrastructure is strategically distributed across Tier-1 data centers to ensure maximum
+                        redundancy.</p>
                 </div>
-                <div class="node-body">
-                    <h3>San Francisco</h3>
-                    <p class="node-id">NODE_SF_001</p>
-                    <div class="node-meta">
-                        <span>Latency: 0.2ms</span>
-                        <span>Uptime: 99.99%</span>
+
+                <div class="nodes-grid">
+                    <div class="node-card reveal-up" style="--delay: 0.1s">
+                        <div class="node-header">
+                            <i class="fa-solid fa-satellite-dish"></i>
+                            <span class="node-status">ONLINE</span>
+                        </div>
+                        <div class="node-body">
+                            <h3>San Francisco</h3>
+                            <p class="node-id">NODE_SF_001</p>
+                            <div class="node-meta">
+                                <span>Latency: 0.2ms</span>
+                                <span>Uptime: 99.99%</span>
+                            </div>
+                        </div>
+                        <div class="node-footer">
+                            <code>IP: 192.168.1.104</code>
+                        </div>
+                    </div>
+
+                    <div class="node-card reveal-up" style="--delay: 0.3s">
+                        <div class="node-header">
+                            <i class="fa-solid fa-satellite-dish"></i>
+                            <span class="node-status">ONLINE</span>
+                        </div>
+                        <div class="node-body">
+                            <h3>London</h3>
+                            <p class="node-id">NODE_LDN_042</p>
+                            <div class="node-meta">
+                                <span>Latency: 0.8ms</span>
+                                <span>Uptime: 99.99%</span>
+                            </div>
+                        </div>
+                        <div class="node-footer">
+                            <code>IP: 45.122.0.19</code>
+                        </div>
+                    </div>
+
+                    <div class="node-card reveal-up" style="--delay: 0.5s">
+                        <div class="node-header">
+                            <i class="fa-solid fa-satellite-dish"></i>
+                            <span class="node-status">ONLINE</span>
+                        </div>
+                        <div class="node-body">
+                            <h3>Tokyo</h3>
+                            <p class="node-id">NODE_TYO_088</p>
+                            <div class="node-meta">
+                                <span>Latency: 1.2ms</span>
+                                <span>Uptime: 99.98%</span>
+                            </div>
+                        </div>
+                        <div class="node-footer">
+                            <code>IP: 210.14.9.202</code>
+                        </div>
                     </div>
                 </div>
-                <div class="node-footer">
-                    <code>IP: 192.168.1.104</code>
-                </div>
             </div>
-
-            <div class="node-card reveal-up" style="--delay: 0.3s">
-                <div class="node-header">
-                    <i class="fa-solid fa-satellite-dish"></i>
-                    <span class="node-status">ONLINE</span>
-                </div>
-                <div class="node-body">
-                    <h3>London</h3>
-                    <p class="node-id">NODE_LDN_042</p>
-                    <div class="node-meta">
-                        <span>Latency: 0.8ms</span>
-                        <span>Uptime: 99.99%</span>
-                    </div>
-                </div>
-                <div class="node-footer">
-                    <code>IP: 45.122.0.19</code>
-                </div>
-            </div>
-
-            <div class="node-card reveal-up" style="--delay: 0.5s">
-                <div class="node-header">
-                    <i class="fa-solid fa-satellite-dish"></i>
-                    <span class="node-status">ONLINE</span>
-                </div>
-                <div class="node-body">
-                    <h3>Tokyo</h3>
-                    <p class="node-id">NODE_TYO_088</p>
-                    <div class="node-meta">
-                        <span>Latency: 1.2ms</span>
-                        <span>Uptime: 99.98%</span>
-                    </div>
-                </div>
-                <div class="node-footer">
-                    <code>IP: 210.14.9.202</code>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+        </section>
 
 
 
 
 
 
-        <section class="final-conversion">
+        <section class="final-conversion" data-aos="fade-down">
             <div class="container">
                 <div class="cta-cyber-card reveal-up">
                     <div class="cta-text">
@@ -443,7 +443,14 @@
 
     <script src="script.js"></script>
 
-    <script></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 900,
+            easing: 'ease-in-out',
+            once: true,   // animation runs only once
+        });
+    </script>
 </body>
 
 </html>

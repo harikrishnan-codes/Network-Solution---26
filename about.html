@@ -9,6 +9,8 @@
     <link rel="icon" href="./assets/bg remove.webp">
     <link rel="stylesheet" href="./about.css">
     <link rel="stylesheet" href="./root.css">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
@@ -80,7 +82,7 @@
 
 
 
-        <section class="about-brand">
+        <section class="about-brand" data-aos="fade-up">
             <div class="container flex-layout">
                 <div class="reveal-left">
                     <span class="badge">Our Legacy</span>
@@ -108,7 +110,7 @@
 
 
 
-        <section class="about-features">
+        <section class="about-features" data-aos="fade-down">
             <div class="container">
                 <div class="section-header reveal-up">
                     <h2>Why Choose Our Network?</h2>
@@ -139,7 +141,7 @@
 
 
 
-        <section class="vision-dark">
+        <section class="vision-dark" data-aos="slide-up">
             <div class="container split-768">
                 <div class="vision-text reveal-left">
                     <span class="tag-orange">Our Vision</span>
@@ -168,7 +170,7 @@
 
 
 
-        <section class="feature-tiles">
+        <section class="feature-tiles" data-aos="slide-down">
             <div class="container">
                 <div class="tile-grid">
                     <div class="tile-item">
@@ -198,7 +200,7 @@
 
 
 
-        <section class="infra-section">
+        <section class="infra-section" data-aos="fade-up">
             <div class="container">
                 <div class="infra-wrapper">
                     <div class="infra-content reveal-left">
@@ -242,7 +244,7 @@
 
 
 
-        <section class="performance-section">
+        <section class="performance-section" data-aos="fade-down">
             <div class="container">
                 <div class="performance-header reveal-up">
                     <span class="tag-orange">Benchmark Tests</span>
@@ -354,6 +356,23 @@
             </div>
         </div>
     </footer>
+
+
+<script src="./script.js"></script>
+
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 900,
+    easing: 'ease-in-out',
+    once: true,   // animation runs only once
+  });
+</script>
+
+
+
+
 </body>
 
 </html>

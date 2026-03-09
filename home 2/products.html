@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="./product.css">
     <link rel="stylesheet" href="./root.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
         rel="stylesheet">
@@ -46,7 +48,7 @@
 
 
     <main>
-        <section class="product-hero">
+        <section class="product-hero" data-aos="fade-up">
             <div class="energy-beam"></div>
 
             <div class="container product-flex">
@@ -82,8 +84,7 @@
                 <div class="product-visual reveal-scale">
                     <div class="hardware-halo"></div>
                     <div class="hardware-frame">
-                        <img src="../assets/product.webp"
-                            alt="V2 High-Speed Router" class="product-img">
+                        <img src="../assets/product.webp" alt="V2 High-Speed Router" class="product-img">
                         <div class="spec-label label-top">Wi-Fi 7 Ready</div>
                         <div class="spec-label label-bottom">Fiber-to-Core</div>
                     </div>
@@ -100,7 +101,7 @@
 
 
 
-        <section class="component-grid-section">
+        <section class="component-grid-section" data-aos="fade-down">
             <div class="container">
                 <div class="section-header-v2 reveal-up">
                     <span class="cyber-tag">Hardware Architecture</span>
@@ -147,7 +148,7 @@
 
 
 
-        <section class="benchmark-section">
+        <section class="benchmark-section" data-aos="fade-up">
             <div class="container">
                 <div class="benchmark-flex">
                     <div class="bench-content reveal-left">
@@ -206,7 +207,7 @@
 
 
 
-        <section class="product-setup-section">
+        <section class="product-setup-section" data-aos="fade-down">
             <div class="container">
                 <div class="section-header-v2 reveal-up">
                     <span class="cyber-tag">Quick Deployment</span>
@@ -262,7 +263,7 @@
 
 
 
-        <section class="compatibility-section">
+        <section class="compatibility-section" data-aos="fade-up">
             <div class="container">
                 <div class="section-header-v2 reveal-up">
                     <span class="cyber-tag">System Integration</span>
@@ -316,7 +317,7 @@
 
 
 
-        <section class="final-conversion">
+        <section class="final-conversion" data-aos="fade-down">
             <div class="container">
                 <div class="cta-cyber-card reveal-up">
                     <div class="cta-text">
@@ -331,6 +332,15 @@
                 </div>
             </div>
         </section>
+
+
+
+
+
+
+
+
+        
 
         <footer class="cyber-footer">
             <div class="container footer-grid">
@@ -395,7 +405,14 @@
 
     <script src="script.js"></script>
 
-    <script></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 900,
+            easing: 'ease-in-out',
+            once: true,   // animation runs only once
+        });
+    </script>
 </body>
 
 </html>

@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./root.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <link
@@ -60,7 +62,7 @@
 
 
     <main>
-        <section class="cyber-hero">
+        <section class="cyber-hero" data-aos="fade-up">
             <div class="hero-grid-overlay"></div>
 
             <div class="container hero-flex">
@@ -94,7 +96,7 @@
 
 
 
-        <section class="infra-grid-section">
+        <section class="infra-grid-section" data-aos="fade-down">
             <div class="container">
                 <div class="section-header-v2 reveal-up">
                     <span class="cyber-tag">Core Tech</span>
@@ -137,7 +139,7 @@
 
 
 
-        <section class="live-status-section">
+        <section class="live-status-section" data-aos="slide-up">
             <div class="container">
                 <div class="section-header-v2 reveal-up">
                     <span class="cyber-tag">Global Monitoring</span>
@@ -195,7 +197,7 @@
 
 
 
-        <section class="cyber-pricing">
+        <section class="cyber-pricing" data-aos="slide-down">
             <div class="container">
                 <div class="section-header-v2 reveal-up">
                     <span class="cyber-tag">Data Tiers</span>
@@ -248,7 +250,7 @@
 
 
 
-        <section class="testimonial-section">
+        <section class="testimonial-section" data-aos="fade-up">
             <div class="container">
                 <div class="section-header-v2 reveal-up">
                     <span class="cyber-tag">User Feedback</span>
@@ -316,7 +318,7 @@
 
 
 
-        <section class="network-map-section">
+        <section class="network-map-section" data-aos="fade-down">
             <div class="container">
                 <div class="map-flex-layout">
                     <div class="stats-panel reveal-left">
@@ -370,7 +372,7 @@
 
 
 
-        <section class="security-depth-section">
+        <section class="security-depth-section" data-aos="slide-up">
             <div class="container">
                 <div class="security-flex">
                     <div class="layers-visual reveal-left">
@@ -422,7 +424,7 @@
 
 
 
-        <section class="cyber-faq-section">
+        <section class="cyber-faq-section" data-aos="slide-down">
             <div class="container">
                 <div class="faq-grid-v2">
                     <div class="system-stats reveal-left">
@@ -493,7 +495,7 @@
 
 
 
-        <section class="support-status-bar">
+        <section class="support-status-bar" data-aos="fade-up">
             <div class="container">
                 <div class="status-flex-layout">
 
@@ -536,7 +538,7 @@
 
 
 
-        <section class="final-conversion">
+        <section class="final-conversion" data-aos="fade-down">
             <div class="container">
                 <div class="cta-cyber-card reveal-up">
                     <div class="cta-text">
@@ -551,6 +553,11 @@
                 </div>
             </div>
         </section>
+
+
+
+
+        
 
         <footer class="cyber-footer">
             <div class="container footer-grid">
@@ -661,6 +668,17 @@
 
         document.addEventListener("click", function () {
             dropdown.classList.remove("show");
+        });
+    </script>
+
+
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 900,
+            easing: 'ease-in-out',
+            once: true,   // animation runs only once
         });
     </script>
 

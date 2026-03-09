@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="./contact.css">
     <link rel="stylesheet" href="about.css">
     <link rel="stylesheet" href="./root.css">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
@@ -20,7 +22,7 @@
     <header class="main-header">
         <div class="nav-container">
             <div class="logo">
-                <a href="index.html"><img src="./assets/orange.webp" alt="" width="150px"></a>
+                <a href="./contact.html"><img src="./assets/orange.webp" alt="" width="150px"></a>
             </div>
 
             <button class="menu-toggle" id="mobile-menu-btn" aria-label="Toggle Menu">
@@ -45,7 +47,7 @@
 
 
     <main>
-        <section class="contact-page">
+        <section class="contact-page" data-aos="fade-up">
             <div class="container">
                 <div class="section-header reveal-up">
                     <span class="tag-orange">Get In Touch</span>
@@ -107,7 +109,7 @@
 
 
 
-        <section class="locations-section">
+        <section class="locations-section" data-aos="fade-down">
             <div class="container">
                 <div class="locations-grid">
 
@@ -147,8 +149,7 @@
                                 <span class="pulse-dot"></span> Network Online
                             </div>
                         </div>
-                        <img src="./assets/contact.webp"
-                            alt="Global Network Map">
+                        <img src="./assets/contact.webp" alt="Global Network Map">
                     </div>
 
                 </div>
@@ -161,7 +162,7 @@
 
 
 
-        <section class="faq-section">
+        <section class="faq-section" data-aos="slide-up">
             <div class="container">
                 <div class="section-header reveal-up">
                     <span class="tag-orange">Support Center</span>
@@ -214,7 +215,7 @@
 
 
 
-        <section class="final-cta">
+        <section class="final-cta" data-aos="slide-down">
             <div class="container">
                 <div class="cta-glass-card reveal-up">
                     <div class="cta-content">
@@ -251,7 +252,7 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <div class="logo">
-                        <a href="./about.html"><img src="./assets/orange.webp" alt="" width="150px"></a>
+                        <a href="./contact.html"><img src="./assets/orange.webp" alt="" width="150px"></a>
                     </div>
                     <p>Pioneering the next generation of sub-millisecond networking and enterprise fiber solutions since
                         2010.</p>
@@ -307,40 +308,64 @@
         </div>
     </footer>
 
+    <script src="./script.js"></script>
     <script>
+
+
+
+
         document.addEventListener("DOMContentLoaded", function () {
 
-    const questions = document.querySelectorAll(".faq-question");
+            const questions = document.querySelectorAll(".faq-question");
 
-    questions.forEach(function (question) {
+            questions.forEach(function (question) {
 
-        question.addEventListener("click", function () {
+                question.addEventListener("click", function () {
 
-            const faqItem = this.parentElement;
-            const answer = faqItem.querySelector(".faq-answer");
-            const icon = this.querySelector("i");
+                    const faqItem = this.parentElement;
+                    const answer = faqItem.querySelector(".faq-answer");
+                    const icon = this.querySelector("i");
 
-            if (faqItem.classList.contains("active")) {
+                    if (faqItem.classList.contains("active")) {
 
-                faqItem.classList.remove("active");
-                answer.style.maxHeight = null;
-                icon.classList.replace("fa-minus", "fa-plus");
+                        faqItem.classList.remove("active");
+                        answer.style.maxHeight = null;
+                        icon.classList.replace("fa-minus", "fa-plus");
 
-            } else {
+                    } else {
 
-                faqItem.classList.add("active");
-                answer.style.maxHeight = answer.scrollHeight + "px";
-                icon.classList.replace("fa-plus", "fa-minus");
+                        faqItem.classList.add("active");
+                        answer.style.maxHeight = answer.scrollHeight + "px";
+                        icon.classList.replace("fa-plus", "fa-minus");
 
-            }
+                    }
+
+                });
+
+            });
 
         });
 
-    });
 
-});
+
+        
     </script>
+
+
+
+
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 900,
+    easing: 'ease-in-out',
+    once: true,   // animation runs only once
+  });
+</script>
+
+
+
 </body>
 
 </html>
-
