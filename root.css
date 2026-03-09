@@ -55,12 +55,28 @@ body {
     padding: 10px 20px;
     border-radius: var(--radius);
     transition: background 0.3s ease;
+    text-decoration: none;
 }
 
 .btn-primary:hover {
     background-color: var(--primary-hover);
 }
 
+.btn{
+    background-color: var(--primary-orange);
+    color: var(--primary-light);
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: var(--radius);
+    text-align: center;
+    transition: background 0.3s ease;
+    font-weight: bold;
+}
+
+.btn:hover{
+    background-color:var(--success);
+    color: var(--primary-light);
+}
 
 
 
