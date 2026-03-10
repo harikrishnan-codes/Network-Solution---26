@@ -186,6 +186,14 @@ body {
 /* Input Groups */
 .input-group {
     margin-bottom: 20px;
+    
+}
+
+.icons{
+display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .input-group label {
@@ -481,12 +489,12 @@ body {
     display: flex;
     align-items: center;
     gap: 8px;
-    color: white;
+    color:orange;
     text-decoration: none;
     font-weight: 600;
     font-size: 0.9rem;
     padding: 10px 20px;
-    background: rgba(255, 255, 255, 0.1);
+    background: black;
     backdrop-filter: blur(10px);
     border-radius: 10px;
     transition: all 0.3s ease;

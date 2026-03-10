@@ -22,8 +22,7 @@
         </div>
 
         <div class="auth-card">
-            <div class="auth-tabs" data-aos="fade-up"
->
+            <div class="auth-tabs" data-aos="fade-up">
                 <button class="tab-btn active" onclick="switchTab('login')">Sign In</button>
                 <button class="tab-btn" onclick="switchTab('signup')">Sign Up</button>
             </div>
@@ -80,7 +79,9 @@
                     <label for="signupName">Full Name</label>
                     <div class="input-wrapper">
                         <i class="fas fa-user"></i>
-                        <input type="text" id="signupName" placeholder="Enter your full name" required>
+                        <input type="text" placeholder="Full Name" pattern="[A-Za-z ]+" maxlength="50"
+                            oninput="this.value=this.value.replace(/[^A-Za-z ]/g,'')" title="Only alphabets allowed"
+                            required>
                     </div>
                     <span class="error-message" id="signupNameError"></span>
                 </div>
@@ -97,8 +98,14 @@
                 <div class="input-group">
                     <label for="signupPhone">Phone Number</label>
                     <div class="input-wrapper">
-                        <i class="fas fa-phone"></i>
-                        <input type="tel" id="signupPhone" placeholder="Enter your phone number" required>
+                        <!-- <i class="fas fa-phone"></i> -->
+                        <div class="input-group icons">
+                            <i class="fa-solid fa-phone"></i>
+
+                            <input type="tel" placeholder="Mobile Number" maxlength="10" pattern="[0-9]{10}"
+                                inputmode="numeric" oninput="this.value=this.value.replace(/[^0-9]/g,'')" required>
+
+                        </div>
                     </div>
                     <span class="error-message" id="signupPhoneError"></span>
                 </div>

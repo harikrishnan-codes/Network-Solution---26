@@ -280,9 +280,18 @@
                             <input type="text" placeholder="Enter your area or pincode" required>
                         </div>
                         <div class="input-group">
-                            <i class="fa-solid fa-phone"></i>
-                            <input type="tel" placeholder="Mobile Number" required>
-                        </div>
+<i class="fa-solid fa-phone"></i>
+
+<input 
+type="tel"
+placeholder="Mobile Number"
+maxlength="10"
+pattern="[0-9]{10}"
+inputmode="numeric"
+oninput="this.value=this.value.replace(/[^0-9]/g,'')"
+required>
+
+</div>
                         <button type="submit" class="btn-primary">Check Now</button>
                     </form>
 

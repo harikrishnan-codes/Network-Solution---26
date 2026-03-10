@@ -88,8 +88,10 @@
                     <div class="contact-form-container reveal-right">
                         <form class="main-contact-form" action="./404.html" method="GET">
                             <div class="form-row">
-                                <input type="text" placeholder="Full Name" required>
-                                <input type="email" placeholder="Email Address" required>
+                                <input type="text" placeholder="Full Name" pattern="[A-Za-z ]+" maxlength="50"
+                                    oninput="this.value=this.value.replace(/[^A-Za-z ]/g,'')"
+                                    title="Only alphabets allowed" required> <input type="email"
+                                    placeholder="Email Address" required>
                             </div>
                             <input type="text" placeholder="Subject (e.g., New Connection, Technical Issue)">
                             <textarea placeholder="Your Message..." rows="5" required></textarea>
@@ -270,8 +272,8 @@
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About</a></li>
                         <li><a href="service.html">Service</a></li>
-                        <li><a href="service.html">Contact</a></li>
-                        <li><a href="service.html">Dashboard</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="dashboard.html">Dashboard</a></li>
                         <li><a href="sign.html">SignUp</a></li>
                     </ul>
                 </div>
@@ -348,21 +350,21 @@
 
 
 
-        
+
     </script>
 
 
 
 
 
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init({
-    duration: 900,
-    easing: 'ease-in-out',
-    once: true,   // animation runs only once
-  });
-</script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 900,
+            easing: 'ease-in-out',
+            once: true,   // animation runs only once
+        });
+    </script>
 
 
 

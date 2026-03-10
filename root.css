@@ -3,30 +3,25 @@
 
 
 :root {
-    /* --- Primary Brand Colors --- */
-
+ 
     --primary-orange: #FF6B00;
     --primary-hover: #E66000;
     --primary-light: #FFF7ED;
     --navy:rgb(4, 4, 44);
 
-    /* --- Neutral Palette (Light Theme) --- */
-    /* --- The New Neutral Balance --- */
-    --bg-main: #EBEBEB;       /* Premium Light Gray */
-    --bg-subtle: #FFFFFF;     /* Pure White for cards to stand out */
-    --border-color: #D1D5DB;   /* Soft gray border */
+      --bg-main: #EBEBEB;      
+    --bg-subtle: #FFFFFF;     
+    --border-color: #D1D5DB;  
     
-    /* --- Typography Adjustment (Darker for Contrast) --- */
-    --text-main: #1F2937;     /* Deep Charcoal for high readability */
-    --text-muted: #4B5563;    /* Medium Gray for descriptions */
+     --text-main: #1F2937;    
+    --text-muted: #4B5563;    
     --text-on-orange: #FFFFFF;
 
     --success: #10B981;
     --error: #EF4444;
     --info: #0EA5E9;
 
-    /* --- Spacing & Shadows --- */
-    --radius: 8px;
+     --radius: 8px;
     --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
@@ -83,8 +78,7 @@ body {
 
 
 :root {
-    /* --- Font Sizes --- */
-    --fs-h1: 2.5rem;
+     --fs-h1: 2.5rem;
     --fs-h2: 2rem;
     --fs-h3: 1.5rem;
     --fs-h4: 1.25rem;
@@ -138,8 +132,7 @@ p {
 
 
 
-/* header */
-
+ 
 .main-header {
     background-color: var(--bg-main);
     border-bottom: 1px solid var(--border-color);
