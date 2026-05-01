@@ -51,38 +51,169 @@
 
 
     <main>
-        <section class="services-hero" data-aos="fade-up">
-            <div class="container hero-grid">
-                <div class="hero-text reveal-left">
-                    <span class="badge">Our Solutions</span>
-                    <h1>High-Performance <br><span class="highlight">Network Services</span></h1>
-                    <p>From ultra-fast home fiber to enterprise-grade dedicated leased lines, we provide the
-                        infrastructure that powers your digital ambition.</p>
 
-                    <div class="hero-actions">
-                        <a href="./404.html" class="btn-primary">Explore Services</a>
-                        <a href="./404.html" class="btn-secondary-link">Get a Quote <i
-                                class="fa-solid fa-chevron-right"></i></a>
+
+        <section class="service-hero-premium">
+    <!-- Reusing your network-canvas for background consistency -->
+    <canvas id="service-canvas"></canvas>
+
+    <div class="container service-flex">
+        <div class="service-text reveal-left">
+            <span class="service-badge">Service Portfolio 2026</span>
+            <h1>High-Capacity <span class="accent">Fiber Solutions</span></h1>
+            <p>From residential gigabit speeds to enterprise-grade dedicated internet access, we provide the conduits for modern innovation.</p>
+            
+            <div class="service-quick-stats">
+                <div class="quick-stat">
+                    <strong>10Gbps</strong>
+                    <span>Max Speed</span>
+                </div>
+                <div class="quick-stat">
+                    <strong>Symmetric</strong>
+                    <span>Data Flow</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="service-visual reveal-right">
+            <div class="node-cluster">
+                <!-- Central Node -->
+                <div class="main-node">
+                    <i class="fas fa-network-wired"></i>
+                </div>
+                <!-- Floating Service Badges -->
+                <div class="floating-service s1"><span>Residential</span></div>
+                <div class="floating-service s2"><span>Enterprise</span></div>
+                <div class="floating-service s3"><span>Dedicated</span></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+<section class="service-matrix" id="service-trigger">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Core Capabilities</span>
+            <h2>Engineered for <span class="accent">Peak Performance</span></h2>
+            <p>Our infrastructure is built on four pillars of excellence to ensure your business or home never skips a beat.</p>
+        </div>
+
+        <div class="matrix-grid">
+            <!-- Feature 1 -->
+            <div class="matrix-card" data-aos="fade-up">
+                <div class="matrix-icon">
+                    <i class="fas fa-tachometer-alt"></i>
+                </div>
+                <h3>Ultra-Low Latency</h3>
+                <p>Achieve sub-1ms internal latency with our direct-to-node optical routing technology.</p>
+                <div class="matrix-footer">
+                    <span>99.9% Efficiency</span>
+                </div>
+            </div>
+
+            <!-- Feature 2: Featured -->
+            <div class="matrix-card featured" data-aos="fade-up" data-aos-delay="100">
+                <div class="popular-tag">Priority Path</div>
+                <div class="matrix-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>Enterprise Security</h3>
+                <p>Advanced DDoS mitigation and end-to-end encryption at the hardware level for every connection.</p>
+                <div class="matrix-footer">
+                    <span>Active Protection</span>
+                </div>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="matrix-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="matrix-icon">
+                    <i class="fas fa-sync"></i>
+                </div>
+                <h3>Symmetric Bandwidth</h3>
+                <p>Experience identical upload and download speeds, essential for cloud-native workflows.</p>
+                <div class="matrix-footer">
+                    <span>1:1 Ratio</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+        <section class="service-specs">
+    <div class="container spec-grid">
+        <!-- Visual Side -->
+        <div class="spec-visual" data-aos="zoom-in">
+            <div class="spec-image-wrapper">
+                <img src="./assets/w1.webp" alt="Network Infrastructure">
+                <div class="spec-glass-overlay">
+                    <div class="pulse-dot"></div>
+                    <span>Tier-4 Certified Node</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content Side -->
+        <div class="spec-content">
+            <span class="section-tag">Deep Dive</span>
+            <h2>The Infrastructure <span class="accent">Architecture</span></h2>
+            <p>Our network is built on a non-blocking switching fabric, ensuring that your allocated bandwidth is always available, never contested.</p>
+
+            <div class="spec-accordion">
+                <!-- Spec 1 -->
+                <div class="spec-item">
+                    <input type="checkbox" id="spec1" class="spec-input">
+                    <label for="spec1" class="spec-label">
+                        <span>Optical Edge Routing</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </label>
+                    <div class="spec-body">
+                        <p>We utilize BGP optimization and direct peering at the optical edge to reduce hops and decrease global latency by up to 40% compared to standard ISPs.</p>
                     </div>
                 </div>
 
-                <div class="hero-visual reveal-right">
-                    <div class="image-container">
-                        <img src="./assets/w2.webp" alt="Data Center Services">
+                <!-- Spec 2 -->
+                <div class="spec-item">
+                    <input type="checkbox" id="spec2" class="spec-input">
+                    <label for="spec2" class="spec-label">
+                        <span>Layer 2 / Layer 3 Transport</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </label>
+                    <div class="spec-body">
+                        <p>Standardized MPLS/VPLS support for seamless site-to-site connectivity and private networking across our entire global footprint.</p>
+                    </div>
+                </div>
 
-                        <div class="glass-stat">
-                            <div class="stat-item">
-                                <i class="fa-solid fa-bolt-lightning"></i>
-                                <div>
-                                    <strong>99.9%</strong>
-                                    <span>Uptime</span>
-                                </div>
-                            </div>
-                        </div>
+                <!-- Spec 3 -->
+                <div class="spec-item">
+                    <input type="checkbox" id="spec3" class="spec-input">
+                    <label for="spec3" class="spec-label">
+                        <span>Physical Path Diversity</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </label>
+                    <div class="spec-body">
+                        <p>Redundant fiber entry points for enterprise buildings, ensuring zero downtime even in the event of a localized physical cable strike.</p>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
 
 
 
@@ -91,109 +222,152 @@
 
 
 
+       <section class="service-plans">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Pricing & Plans</span>
+            <h2>Scalable Solutions for <span class="accent">Every Need</span></h2>
+            <p>Select the tier that aligns with your bandwidth requirements and performance goals.</p>
+        </div>
 
-        <section class="services-grid-section" id="all-services" data-aos="fade-down">
-            <div class="container">
-                <div class="section-info reveal-up">
-                    <span class="tag-orange">Our Portfolio</span>
-                    <h2>Solutions Tailored for <span class="navy-text">Every Need</span></h2>
-                    <p>Whether you are a home user or a global enterprise, our infrastructure is built to scale with
-                        you.</p>
+        <div class="plans-wrapper">
+            <!-- Plan 1: Essential -->
+            <div class="plan-card" data-aos="fade-up">
+                <div class="plan-type">Starter</div>
+                <div class="plan-price">$49<span>/mo</span></div>
+                <ul class="plan-features">
+                    <li><i class="fas fa-check"></i> 500 Mbps Symmetric</li>
+                    <li><i class="fas fa-check"></i> Standard Support</li>
+                    <li><i class="fas fa-check"></i> Wi-Fi 6 Router Included</li>
+                </ul>
+                <a href="./404.html" class="btn-outline-plan">Choose Plan</a>
+            </div>
+
+            <!-- Plan 2: Pro (Featured) -->
+            <div class="plan-card featured" data-aos="fade-up" data-aos-delay="100">
+                <div class="popular-ribbon">Most Popular</div>
+                <div class="plan-type">Pro Fiber</div>
+                <div class="plan-price">$79<span>/mo</span></div>
+                <ul class="plan-features">
+                    <li><i class="fas fa-check"></i> 1 Gbps Symmetric</li>
+                    <li><i class="fas fa-check"></i> Priority 24/7 Support</li>
+                    <li><i class="fas fa-check"></i> Static IP Optional</li>
+                </ul>
+                <a href="./404.html" class="btn-primary">Choose Plan</a>
+            </div>
+
+            <!-- Plan 3: Elite -->
+            <div class="plan-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="plan-type">Ultra 2G</div>
+                <div class="plan-price">$129<span>/mo</span></div>
+                <ul class="plan-features">
+                    <li><i class="fas fa-check"></i> 2 Gbps Symmetric</li>
+                    <li><i class="fas fa-check"></i> Dedicated Manager</li>
+                    <li><i class="fas fa-check"></i> Business Continuity Kit</li>
+                </ul>
+                <a href="./404.html" class="btn-outline-plan">Choose Plan</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<section class="service-sla">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Reliability</span>
+            <h2>Our Service <span class="accent">Guarantees</span></h2>
+            <p>We don't just provide speed; we provide certainty. Our SLA is the gold standard in the industry.</p>
+        </div>
+
+        <div class="sla-grid">
+            <!-- Main Guarantee: Uptime -->
+            <div class="sla-card-large">
+                <div class="sla-glow"></div>
+                <div class="sla-content">
+                    <div class="sla-icon"><i class="fas fa-clock"></i></div>
+                    <div class="sla-text">
+                        <h3>99.99% Uptime Guarantee</h3>
+                        <p>Our resilient architecture ensures your connection stays alive even during major infrastructure shifts.</p>
+                    </div>
+                    <div class="sla-badge">Tier 4 Standard</div>
                 </div>
+            </div>
 
-                <div class="services-wrapper">
-                    <div class="service-card reveal-up" style="--delay: 0.2s">
-                        <div class="card-icon">
-                            <i class="fa-solid fa-house-laptop"></i>
-                        </div>
-                        <h3>Home Fiber</h3>
-                        <p>Ultra-fast, symmetric speeds perfect for 4K streaming, smart homes, and remote work
-                            without interruptions.</p>
-                        <ul class="card-list">
-                            <li><i class="fa-solid fa-check"></i> Up to 1Gbps Speed</li>
-                            <li><i class="fa-solid fa-check"></i> Unlimited Data</li>
-                        </ul>
-                        <a href="./404.html" class="service-link">View Plans →</a>
-                    </div>
+            <!-- Supporting Guarantees -->
+            <div class="sla-card-small">
+                <i class="fas fa-bolt"></i>
+                <h4>Sub-10ms Latency</h4>
+                <p>Guaranteed jitter-free routing across our national core nodes.</p>
+            </div>
 
-                    <div class="service-card featured reveal-up" style="--delay: 0.4s">
-                        <div class="card-icon">
-                            <i class="fa-solid fa-building-shield"></i>
-                        </div>
-                        <h3>Business Leased Line</h3>
-                        <p>Dedicated bandwidth with a 1:1 contention ratio and enterprise-grade security for
-                            mission-critical tasks.</p>
-                        <ul class="card-list">
-                            <li><i class="fa-solid fa-check"></i> 99.9% Uptime SLA</li>
-                            <li><i class="fa-solid fa-check"></i> Static IP Included</li>
-                        </ul>
-                        <a href="./404.html" class="service-link">Contact Sales →</a>
-                    </div>
+            <div class="sla-card-small">
+                <i class="fas fa-headset"></i>
+                <h4>15-Min Response</h4>
+                <p>Priority ticket handling for enterprise and pro-tier clients.</p>
+            </div>
 
-                    <div class="service-card reveal-up" style="--delay: 0.6s">
-                        <div class="card-icon">
-                            <i class="fa-solid fa-server"></i>
-                        </div>
-                        <h3>Cloud Connect</h3>
-                        <p>Direct, private access to major cloud providers like AWS, Azure, and Google Cloud for
-                            reduced latency.</p>
-                        <ul class="card-list">
-                            <li><i class="fa-solid fa-check"></i> Reduced Hops</li>
-                            <li><i class="fa-solid fa-check"></i> Enhanced Security</li>
-                        </ul>
-                        <a href="./404.html" class="service-link">Learn More →</a>
+            <div class="sla-card-small">
+                <i class="fas fa-file-invoice-dollar"></i>
+                <h4>SLA Credits</h4>
+                <p>Automatic billing credits if our performance metrics aren't met.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+<section class="service-coverage">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Network Reach</span>
+            <h2>Connected Without <span class="accent">Boundaries</span></h2>
+            <p>Our footprint covers over 150 metropolitan areas with dedicated low-latency peering points.</p>
+        </div>
+
+        <div class="coverage-grid">
+            <!-- Main Map Visual -->
+            <div class="map-container" data-aos="zoom-in">
+                <img src="./assets/global-network.webp" alt="Network Map" class="base-map">
+                <!-- Pulse Points -->
+                <div class="pulse-point p1"></div>
+                <div class="pulse-point p2"></div>
+                <div class="pulse-point p3"></div>
+                
+                <div class="map-stats-overlay">
+                    <div class="mini-stat">
+                        <span>Active Nodes</span>
+                        <strong>1,240+</strong>
                     </div>
                 </div>
             </div>
-        </section>
 
-
-
-
-
-
-
-
-
-        <section class="process-section" data-aos="slide-up">
-            <div class="container">
-                <div class="section-header reveal-up">
-                    <span class="tag-orange">Our Process</span>
-                    <h2>Get Connected in <span class="highlight">4 Simple Steps</span></h2>
-                    <p>From your first click to ultra-fast browsing, we make the transition seamless.</p>
+            <!-- Side Info Cards -->
+            <div class="coverage-info">
+                <div class="coverage-card">
+                    <i class="fas fa-microchip"></i>
+                    <h4>Smart Routing</h4>
+                    <p>AI-driven path selection ensures your data takes the fastest route, every time.</p>
                 </div>
-
-                <div class="process-steps">
-                    <div class="step-item reveal-up" style="--delay: 0.2s">
-                        <div class="step-number">01</div>
-                        <div class="step-icon"><i class="fa-solid fa-magnifying-glass-location"></i></div>
-                        <h4>Check Coverage</h4>
-                        <p>Enter your location to see available fiber plans in your area.</p>
-                    </div>
-
-                    <div class="step-item reveal-up" style="--delay: 0.4s">
-                        <div class="step-number">02</div>
-                        <div class="step-icon"><i class="fa-solid fa-file-invoice"></i></div>
-                        <h4>Choose Plan</h4>
-                        <p>Select the speed and bandwidth that fits your digital lifestyle.</p>
-                    </div>
-
-                    <div class="step-item reveal-up" style="--delay: 0.6s">
-                        <div class="step-number">03</div>
-                        <div class="step-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
-                        <h4>Installation</h4>
-                        <p>Our expert engineers set up your ONT and Wi-Fi 6 router.</p>
-                    </div>
-
-                    <div class="step-item reveal-up" style="--delay: 0.8s">
-                        <div class="step-number">04</div>
-                        <div class="step-icon"><i class="fa-solid fa-rocket"></i></div>
-                        <h4>Go Live</h4>
-                        <p>Enjoy blazing fast internet with 24/7 dedicated support.</p>
-                    </div>
+                <div class="coverage-card">
+                    <i class="fas fa-broadcast-tower"></i>
+                    <h4>Edge Computing</h4>
+                    <p>Processing data closer to the user to maintain sub-millisecond response times.</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
 
 
 
@@ -202,108 +376,35 @@
 
 
 
-
-        <section class="pricing-section" data-aos="slide-down">
-            <div class="container">
-                <div class="section-header reveal-up">
-                    <span class="tag-orange">Our Plans</span>
-                    <h2>Choose Your <span class="highlight">Fiber Speed</span></h2>
-                    <p>Simple, transparent pricing with no hidden installation charges.</p>
+<section class="service-cta-final">
+    <div class="container">
+        <div class="cta-glass-box">
+            <!-- Decorative Background Glow -->
+            <div class="cta-mesh-glow"></div>
+            
+            <div class="cta-main-content">
+                <div class="status-pill">
+                    <span class="live-dot"></span> 
+                    Node Availability: 100% Online
                 </div>
-
-                <div class="pricing-grid">
-                    <div class="price-card reveal-up" style="--delay: 0.2s">
-                        <div class="price-header">
-                            <h4>Basic Starter</h4>
-                            <div class="price-amount"><span>$</span>49<span>/mo</span></div>
-                        </div>
-                        <ul class="price-features">
-                            <li><i class="fa-solid fa-gauge-high"></i> 100 Mbps Speed</li>
-                            <li><i class="fa-solid fa-infinity"></i> Unlimited Data</li>
-                            <li><i class="fa-solid fa-wifi"></i> Dual-Band Router</li>
-                            <li class="disabled"><i class="fa-solid fa-circle-xmark"></i> Static IP</li>
-                        </ul>
-                        <a href="./404.html" class="btn-outline-navy">Select Plan</a>
-                    </div>
-
-                    <div class="price-card popular reveal-up" style="--delay: 0.4s">
-                        <div class="popular-tag">Most Popular</div>
-                        <div class="price-header">
-                            <h4>Entertainment Pro</h4>
-                            <div class="price-amount"><span>$</span>79<span>/mo</span></div>
-                        </div>
-                        <ul class="price-features">
-                            <li><i class="fa-solid fa-gauge-high"></i> 300 Mbps Speed</li>
-                            <li><i class="fa-solid fa-infinity"></i> Unlimited Data</li>
-                            <li><i class="fa-solid fa-tv"></i> FREE OTT Apps</li>
-                            <li><i class="fa-solid fa-shield-check"></i> Security Suite</li>
-                        </ul>
-                        <a href="./404.html" class="btn-primary">Select Plan</a>
-                    </div>
-
-                    <div class="price-card reveal-up" style="--delay: 0.6s">
-                        <div class="price-header">
-                            <h4>Ultra Giga</h4>
-                            <div class="price-amount"><span>$</span>129<span>/mo</span></div>
-                        </div>
-                        <ul class="price-features">
-                            <li><i class="fa-solid fa-gauge-high"></i> 1 Gbps Speed</li>
-                            <li><i class="fa-solid fa-infinity"></i> Unlimited Data</li>
-                            <li><i class="fa-solid fa-microchip"></i> Static IP Included</li>
-                            <li><i class="fa-solid fa-headset"></i> Priority Support</li>
-                        </ul>
-                        <a href="./404.html" class="btn-outline-navy">Select Plan</a>
-                    </div>
+                <h2>Ready to Power Your <br><span class="accent">Digital Workspace?</span></h2>
+                <p>Join thousands of businesses and creators already operating at the speed of light. Deployment within 24-48 hours in most covered areas.</p>
+                
+                <div class="cta-actions">
+                    <a href="./404.html" class="btn-primary">Order Now</a>
+                    <a href="./contact.html" class="btn-secondary-glass">Talk to an Expert</a>
                 </div>
             </div>
-        </section>
 
-
-
-
-
-
-
-
-        <section class="coverage-section" data-aos="fade-up">
-            <div class="container">
-                <div class="coverage-card reveal-up">
-                    <div class="coverage-content">
-                        <span class="tag-orange">Check Availability</span>
-                        <h2>Is our Fiber in <span class="navy-text">Your Neighborhood?</span></h2>
-                        <p>Enter your details below to see the best plans available at your specific address.</p>
-                    </div>
-
-                    <form class="coverage-form" action="./404.html" method="GET">
-                        <div class="input-group">
-                            <i class="fa-solid fa-location-dot"></i>
-                            <input type="text" placeholder="Enter your area or pincode" required>
-                        </div>
-                        <div class="input-group">
-<i class="fa-solid fa-phone"></i>
-
-<input 
-type="tel"
-placeholder="Mobile Number"
-maxlength="10"
-pattern="[0-9]{10}"
-inputmode="numeric"
-oninput="this.value=this.value.replace(/[^0-9]/g,'')"
-required>
-
-</div>
-                        <button type="submit" class="btn-primary">Check Now</button>
-                    </form>
-
-                    <div class="coverage-footer">
-                        <p><i class="fa-solid fa-circle-info"></i> Currently expanding in 50+ new cities across the
-                            country.</p>
-                    </div>
-                </div>
+            <!-- Footer micro-details for trust -->
+            <div class="cta-bottom-bar">
+                <span><i class="fas fa-undo"></i> 30-Day Guarantee</span>
+                <span><i class="fas fa-bolt"></i> Instant Activation</span>
+                <span><i class="fas fa-headset"></i> 24/7 Tech Support</span>
             </div>
-        </section>
-
-
+        </div>
+    </div>
+</section>
 
 
 
